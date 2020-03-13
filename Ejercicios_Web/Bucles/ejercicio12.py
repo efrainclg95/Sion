@@ -3,6 +3,7 @@
 
 v_frase = str(input("Ingrese una frase: ").upper())
 v_letra = str(input("Decida una letra: ").upper())
+
 for i in (v_frase):
     print(list(i))
     # print(str(i))
