@@ -17,7 +17,7 @@ for nota_asignatura in lista_asignatura:
 print("Notas Ingresadas: " + str(lista_nota_asignatura))
 
 for i in range(len(lista_asignatura)):
-    print("Su nota en " + str(lista_asignatura[i]) + " es de: " + str(lista_nota_asignatura[i])  )
+    print("Su nota en " + str(lista_asignatura[i]) + " es de: " + str(lista_nota_asignatura[i]))
 
 
 
