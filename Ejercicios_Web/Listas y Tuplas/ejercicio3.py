@@ -3,6 +3,8 @@
 # y después las muestre por pantalla con el mensaje En <asignatura> has sacado <nota> donde <asignatura> es cada una des las asignaturas de la lista y
 # <nota> cada una de las correspondientes notas introducidas por el usuario.
 
+# Por temas del ejercicio se ha considerado solo 3 asignaturas
+
 lista_asignatura = []
 lista_nota_asignatura = []
 
