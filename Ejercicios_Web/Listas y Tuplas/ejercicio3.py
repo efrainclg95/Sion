@@ -3,25 +3,22 @@
 # y después las muestre por pantalla con el mensaje En <asignatura> has sacado <nota> donde <asignatura> es cada una des las asignaturas de la lista y
 # <nota> cada una de las correspondientes notas introducidas por el usuario.
 
-# Sol 1
+lista_asignatura = []
+lista_nota_asignatura = []
 
-v_lista_asignatura = []
-v_nota_asignatura = []
+for asignatura in range(1,3 + 1):
+    v_ingresa_asignatura = str(input("Ingrese Asignatura {}".format(asignatura) + ": "))
+    lista_asignatura.append(v_ingresa_asignatura)
+print("Asignaturas Registradas: " + str(lista_asignatura))
 
-for asignatura in range(1,4):
-    v_asignatura = str(input("Ingrese asignatura {}".format(asignatura) + ": "))
-    v_lista_asignatura.append(v_asignatura)
+for nota_asignatura in lista_asignatura:
+    v_ingresa_nota = int(input("Ingrese Nota de la Asignatura {}".format(nota_asignatura) + ": "))
+    lista_nota_asignatura.append(v_ingresa_nota)
+print("Notas Ingresadas: " + str(lista_nota_asignatura))
 
-print("Asignaturas registradas: " + str(v_lista_asignatura))
+for i in range(len(lista_asignatura)):
+    print("Su nota en " + str(lista_asignatura[i]) + " es de: " + str(lista_nota_asignatura[i])  )
 
-for nota in v_lista_asignatura:
-    v_nota = int(input("Ingrese nota de " + nota + ": "))
-    v_nota_asignatura.append(v_nota)
-
-print("Notas registradas: " + str(v_nota_asignatura))
-
-for i in range(len(v_lista_asignatura)):
-    print("En " + str(v_lista_asignatura[i]) + " sacaste: " + str(v_nota_asignatura[i]))
 
 
 
