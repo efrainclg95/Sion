@@ -5,18 +5,16 @@
 asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
 nota_asignatura = []
 
-# print(len(asignaturas))
-
 for i in range(len(asignaturas)):
     v_nota = int(input("Ingrese nota de " + asignaturas[i] + ": "))
     nota_asignatura.append(v_nota)
-# print(nota_asignatura)
 
 for j in range(len(nota_asignatura)):
     if nota_asignatura[j] <= 10:
         nota_asignatura.append(j)
-        print("Notas desaprobadas: " + str(nota_asignatura[j]))
-    # print("nota: " + str(nota_asignatura[j]))
+        # print("Notas desaprobadas: " + str(nota_asignatura[j]))
+        print("Asignaturas desaprobadas: " + str(asignaturas[j]) + " con nota de: " + str(nota_asignatura[j]))
+
 
 
 
