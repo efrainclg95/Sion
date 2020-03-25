@@ -2,6 +2,8 @@
 # pregunte al usuario la nota que ha sacado en cada asignatura y elimine de la lista las asignaturas aprobadas.
 # Al final el programa debe mostrar por pantalla las asignaturas que el usuario tiene que repetir.
 
+# Sol1
+
 asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
 nota_asignatura = []
 
@@ -12,8 +14,8 @@ for i in range(len(asignaturas)):
 for j in range(len(nota_asignatura)):
     if nota_asignatura[j] <= 10:
         nota_asignatura.append(j)
-        # print("Notas desaprobadas: " + str(nota_asignatura[j]))
         print("Asignaturas desaprobadas: " + str(asignaturas[j]) + " con nota de: " + str(nota_asignatura[j]))
+
 
 
 
