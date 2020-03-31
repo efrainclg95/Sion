@@ -2,13 +2,17 @@
 
 vocales = ["a","e","i","o","u"]
 v_palabra = str("karina")
+contador = int(0)
 
-for vocal in vocales:
+for i in vocales:
+    # print("vocal " + str(i))
     contador = 0
-    for letra in v_palabra:
-        if vocal == letra:
+    for j in v_palabra:
+        # print("palabra " + str(j))
+        if i == j:
             contador = contador + 1
-    print("la vocal " + str(vocal) + " se repite " + str(contador))
+
+    print("la vocal: " + i + " se repite: " + str(contador) + " veces")
 
 
 
