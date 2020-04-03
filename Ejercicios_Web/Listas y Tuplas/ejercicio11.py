@@ -1,5 +1,7 @@
 # Escribir un programa que almacene los vectores (1,2,3) y (-1,0,2) en dos listas y muestre por pantalla su producto escalar.
 
+# Sol2
+
 v1 = (1,2,3)
 v2 = (-1,0,2)
 lv1 = []
@@ -29,4 +31,4 @@ print("El producto escalar es: " + str(p))
 # p = (lv1[0] * lv2[0]) + (lv1[1] * lv2[1]) + (lv1[2] * lv2[2])
 # print(p)
 
-# Sol2
+
