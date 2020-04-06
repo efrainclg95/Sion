@@ -11,7 +11,7 @@
 
 # Sol2 con números aleatorios
 
-from random import randint, uniform,random
+from random import randint
 
 v_lista_bolas = []
 
