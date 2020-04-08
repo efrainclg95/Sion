@@ -1,18 +1,20 @@
 # Escribir un programa que pregunte por una muestra de números, separados por comas,
 # los guarde en una lista y muestre por pantalla su media y desviación típica.
 
-v_num = input("Introduce una muestra de números separados por comas: ")
-
-# v_num = str("4,3,5,8,5,2,3,5")
-v_num = v_num.split(",")
-v_ancho = len(v_num)
-v_media = float(0)
-
-for i in range(v_ancho):
-    v_media = float(v_media) + int(v_num[i])/v_ancho
-
-print("La media es: " + str(v_media))
-
+sample = input("Introduce una muestra de números separados por comas: ")
+sample = sample.split(',')
+n = len(sample)
+for i in range(n):
+    sample[i] = int(sample[i])
+sample = tuple(sample)
+sum = 0
+sumsq = 0
+for i in sample:
+    sum += i
+    sumsq += i**2
+mean = sum/n
+stdev = (sumsq/n-mean**2)**(1/2)
+print('La media es', mean, ', y la desviación típica es', stdev)
 
 
 
