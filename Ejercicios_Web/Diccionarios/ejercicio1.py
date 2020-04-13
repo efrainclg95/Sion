@@ -6,4 +6,11 @@ diccionario = {'Euro' : ['€'],
                'Yen' : ['¥']
                }
 
-print(diccionario['Euro'])
+v_divisa = str(input("Ingrese Divisa: "))
+
+if v_divisa == 'Euro' or v_divisa == 'Dollar' or v_divisa == 'Yen' :
+    print("Su símbolo es: " + str(diccionario[v_divisa]))
+else:
+    print("La Divisa ingresada no existe en el diccionario")
+
+
