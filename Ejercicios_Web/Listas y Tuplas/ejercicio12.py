@@ -9,6 +9,7 @@ b = ((-1,0),(0,1),(1,1))
 
 result = [[0,0],
           [0,0]]
+
 for i in range(len(a)):
     for j in range(len(b[0])):
         for k in range(len(b)):
