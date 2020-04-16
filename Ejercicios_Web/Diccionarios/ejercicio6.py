@@ -4,12 +4,24 @@
 
 dic = {}
 
-v_dato = str(input("Que dato quieres introducir: ").upper() + ": ")
-v_d1 = str(input(v_dato) + " ").upper()
+v_dato = str(input("Que dato quieres introducir: ").upper())
+v_d1 = str(input(v_dato + ": ")).upper()
 
 dic[v_dato] = v_d1
 
 print(dic)
+
+consulta = str(input("Quieres añadir más información (Si/No): ").upper())
+
+while consulta == 'SI':
+    v_dato = str(input("Que dato quieres introducir: ").upper())
+    v_d1 = str(input(v_dato + ": ")).upper()
+    dic[v_dato] = v_d1
+    print(dic)
+
+
+
+
 
 
 
