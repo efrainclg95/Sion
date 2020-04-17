@@ -19,7 +19,7 @@ while v_pregunta == 'NO':
 
 print("Lista de Compras")
 for i in dic:
-    print(i)
+    print((i) + "    " + str(dic.get(i)))
 
 
 
