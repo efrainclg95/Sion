@@ -8,16 +8,19 @@
 # Total         Costo
 
 dic = {}
-v_articulo = str(input("¿Qué artículo desea comprar? "))
-v_precio = float(input("¿Cual es el precio? "))
-dic[v_articulo] = v_precio
-v_pregunta = str(input("¿Desea terminar con la lista? Si/No ").upper())
+v_pregunta = "NO"
 
 while v_pregunta == 'NO':
-
     v_articulo = str(input("¿Qué artículo desea comprar? "))
-    v_precio = float(input("¿Cual es el precio? "))
-    v_pregunta = str(input("¿Desea terminar con la lista? Si/No ").upper())
+    v_precio = float(input("¿Cual es el precio de " + v_articulo + "? "))
     dic[v_articulo] = v_precio
-
     print(dic)
+    v_pregunta = str(input("¿Desea terminar con la lista? Si/No ").upper())
+
+print("Lista de Compras")
+for i in dic:
+    print(i)
+
+
+
+
