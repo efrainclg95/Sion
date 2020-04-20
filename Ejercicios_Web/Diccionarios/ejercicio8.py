@@ -13,16 +13,12 @@ lista3 = []
 frase = str("perro:dog,blanco:white,esta:its,jugando:playing")
 
 lista1 = frase.split(',')
-# print("lista1: " + str(lista1))
 
 for i in range(len(lista1)):
-    # lista2.append(lista1[i])
     lista2 = lista1[i].split(':')
     lista3.append(lista2[1])
-    # print("lista3: " + str(lista3))
-    # lista3.append(lista2[1])
+
     dic[lista2[0]] = lista2[1]
-    # print("lista2: " + str(lista2))
 
 print(dic)
 
