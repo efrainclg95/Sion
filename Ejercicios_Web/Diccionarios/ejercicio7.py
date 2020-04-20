@@ -9,6 +9,7 @@
 
 dic = {}
 v_pregunta = "NO"
+contador = 0
 
 while v_pregunta == 'NO':
     v_articulo = str(input("¿Qué artículo desea comprar? "))
@@ -19,7 +20,9 @@ while v_pregunta == 'NO':
 
 print("Lista de Compras")
 for i in dic:
+    contador = dic.get(i) + contador
     print((i) + "    " + str(dic.get(i)))
+print("Total de coste: " + str(contador))
 
 
 
