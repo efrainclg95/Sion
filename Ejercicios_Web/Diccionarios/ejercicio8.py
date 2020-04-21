@@ -9,10 +9,13 @@ dic = {}
 lista1 = []
 lista2 = []
 lista3 = []
-# frase = str(input("Introduce la lista de palabras y traducciones en formato <<palabra:traducción>> separadas por comas:"))
-frase = str("perro:dog,blanco:white,esta:its,jugando:playing")
 
-lista1 = frase.split(',')
+lista4 = []
+
+# palabra = str(input("Introduce la lista de palabras y traducciones en formato <<palabra:traducción>> separadas por comas:"))
+palabra = str("perro:dog,blanco:white,esta:its,jugando:playing")
+
+lista1 = palabra.split(',')
 
 for i in range(len(lista1)):
     lista2 = lista1[i].split(':')
@@ -20,7 +23,16 @@ for i in range(len(lista1)):
 
     dic[lista2[0]] = lista2[1]
 
-print(dic)
+# print(dic)
+
+# frase = str(input("Ingrese frase: "))
+frase = str("Mi Pibe el perro blanco esta jugando")
+
+for j in frase:
+    lista4 = frase.split()
+print(lista4)
+
+
 
 
 
