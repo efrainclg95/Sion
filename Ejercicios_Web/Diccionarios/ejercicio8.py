@@ -31,15 +31,16 @@ print(dic)
 # frase = str(input("Ingrese frase: "))
 frase = str("Mi Pibe el perro blanco esta jugando en la casa")
 lista4 = frase.split()
-# print(lista4)
+print(lista4)
 
-for j in dic:
-    # print("valor de j: " + j)
-    for k in lista4:
-        # print("valor de k: " + k)
-        if j == k:
-            lista5 = dic.get(j)
-            print(lista5)
+for n, j in enumerate(lista4):
+    if j == 'perro':
+        lista4[n] = dic.get('perro')
+print(lista4)
+
+
+
+
 
 
 
