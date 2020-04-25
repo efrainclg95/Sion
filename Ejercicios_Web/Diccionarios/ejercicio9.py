@@ -25,7 +25,17 @@ while v_pregunta == "A":
         print("Pendiente de cobro: " + str(v_pendiente))
 
     elif v_pregunta == "P":
-        print("Quiero pagar")
+        v_pago = int(input("Introduce el número de la factura a pagar: "))
+
+        v_recaudado = dic.get(v_pago)
+        v_pendiente = v_pendiente - dic.get(v_pago)
+        del dic[v_pago]
+
+        print("Diccionario temporal borrado: " + str(dic))
+        print("Recaudado: " + str(v_recaudado))
+        print("Pendiente de cobro: " + str(v_pendiente))
+
+
 
 
 
