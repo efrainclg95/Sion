@@ -12,15 +12,23 @@ dic = {}
 
 while v_pregunta == "A":
     v_pregunta = input("¿Quieres añadir una nueva factura (A), pagarla (P) o terminar (T)? ")
+
     if v_pregunta == "A":
         v_numfac = int(input("Introduce el número de la factura: "))
         v_costfac = int(input("Introduce el coste de la factura: "))
         dic[v_numfac] = v_costfac
         print("Diccionario temporal: " + str(dic))
 
+        v_pendiente += v_costfac
+
+        print("Recaudado: " + str(v_recaudado))
+        print("Pendiente de cobro: " + str(v_pendiente))
+
+    elif v_pregunta == "P":
+        print("Quiero pagar")
 
 
 
-print("Recaudado: " + str(v_recaudado))
-print("Pendiente de cobro: " + str(v_pendiente))
+
+
 
