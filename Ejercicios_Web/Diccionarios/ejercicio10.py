@@ -13,11 +13,15 @@
 # Terminar el programa.
 
 dic_cliente = {}
+v_opcion = int()
 
 print("Menú de opciones")
-v_opcion = int(input("(1) Añadir cliente \n(2) Eliminar cliente \n(3) Mostrar cliente \n(4) Listar clientes \n(5) Listar clientes preferentes \n(6) Terminar \nElige una opción: "))
+# v_opcion = int(input("(1) Añadir cliente \n(2) Eliminar cliente \n(3) Mostrar cliente \n(4) Listar clientes \n(5) Listar clientes preferentes \n(6) Terminar \nElige una opción: "))
 
 while v_opcion != 6:
+
+    v_opcion = int(input("(1) Añadir cliente \n(2) Eliminar cliente \n(3) Mostrar cliente \n(4) Listar clientes \n(5) Listar clientes preferentes \n(6) Terminar \nElige una opción: "))
+
     if v_opcion == 1:
         v_nif = int(input("Ingrese DNI cliente: "))
         v_nombre = str(input("Ingrese nombre de cliente: "))
@@ -26,12 +30,11 @@ while v_opcion != 6:
         v_email = str(input("Ingrese e-mail de cliente: "))
         v_preferente = str(input("Es cliente preferente S/N: ").upper())
 
-        dic_cliente[v_nif] = {'Nombre':v_nombre,'Dirección':v_direccion,'Teléfono':v_telefono,'Correo':v_email,'Preferente':v_preferente}
-        print("Dic temp: " + str(dic_cliente))
+        dic_cliente[v_nif] = {'Nombre':v_nombre,'Dirección':v_direccion,'Teléfono':v_telefono,'Correo':v_email,'Preferente':v_preferente == 'S'}
+        print("Dic temp 1: " + str(dic_cliente))
 
-        break
-
-
+    elif v_opcion == 3:
+        print("Dic temp 3: " + str(dic_cliente))
 
 print("Opción fuera")
 
