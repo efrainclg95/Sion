@@ -11,3 +11,27 @@
 # Mostrar lista de todos los clientes de la base datos con su NIF y nombre.
 # Mostrar la lista de clientes preferentes de la base de datos con su NIF y nombre.
 # Terminar el programa.
+
+dic_cliente = {}
+
+print("Menú de opciones")
+v_opcion = int(input("(1) Añadir cliente \n(2) Eliminar cliente \n(3) Mostrar cliente \n(4) Listar clientes \n(5) Listar clientes preferentes \n(6) Terminar \nElige una opción: "))
+
+while v_opcion != 6:
+    if v_opcion == 1:
+        v_nif = int(input("Ingrese DNI cliente: "))
+        v_nombre = str(input("Ingrese nombre de cliente: "))
+        v_direccion = str(input("Ingrese dirección de cliente: "))
+        v_telefono = int(input("Ingrese telefono de cliente: "))
+        v_email = str(input("Ingrese e-mail de cliente: "))
+        v_preferente = str(input("Es cliente preferente S/N: ").upper())
+
+        dic_cliente[v_nif] = {'Nombre':v_nombre,'Dirección':v_direccion,'Teléfono':v_telefono,'Correo':v_email,'Preferente':v_preferente}
+        print("Dic temp: " + str(dic_cliente))
+
+        break
+
+
+
+print("Opción fuera")
+
