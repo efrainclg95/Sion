@@ -40,8 +40,16 @@ while v_opcion != 6:
 
     elif v_opcion == 3:
         v_muestra = int(input("Ingrese DNI cliente: "))
-        # dic_cliente.get(v_muestra)
-        print("Dic temp 3: " + str(dic_cliente.get(v_muestra)))
+
+        for keys,values in dic_cliente.get(v_muestra).items():
+            print(keys + ":",values)
+
+    elif v_opcion == 4:
+
+        for keys,values in dic_cliente.items():
+            print(keys, values['Nombre'])
+
+
 
 print("Opción fuera")
 
