@@ -33,8 +33,15 @@ while v_opcion != 6:
         dic_cliente[v_nif] = {'Nombre':v_nombre,'Dirección':v_direccion,'Teléfono':v_telefono,'Correo':v_email,'Preferente':v_preferente == 'S'}
         print("Dic temp 1: " + str(dic_cliente))
 
+    elif v_opcion == 2:
+        v_nif = int(input("Ingrese DNI cliente a eliminar: "))
+        del dic_cliente[v_nif]
+        print("Dic temp 2: " + str(dic_cliente))
+
     elif v_opcion == 3:
-        print("Dic temp 3: " + str(dic_cliente))
+        v_muestra = int(input("Ingrese DNI cliente: "))
+        # dic_cliente.get(v_muestra)
+        print("Dic temp 3: " + str(dic_cliente.get(v_muestra)))
 
 print("Opción fuera")
 
