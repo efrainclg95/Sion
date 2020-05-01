@@ -49,7 +49,14 @@ while v_opcion != 6:
         for keys,values in dic_cliente.items():
             print(keys, values['Nombre'])
 
+    elif v_opcion == 5:
 
+        for keys,values in dic_cliente.items():
+            # print(v_preferente)
+            if values['Preferente']:
+                print("es True: " + str(keys) + ": " + values['Nombre'])
+            else:
+                print("es False: " + str(keys) + ": " + values['Nombre'])
 
 print("Opción fuera")
 
