@@ -15,6 +15,11 @@ for i in range(len(a)):
 
 print(la)
 
+for j in range(len(b)):
+    lb.append(list(b[j]))
+
+print(lb)
+
 # print(a[0])
 
 
