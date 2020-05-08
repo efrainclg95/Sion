@@ -11,7 +11,6 @@ v_palabra = 'perro:dog,bueno:good'
 v_frase = 'el perro es bueno'
 listap = v_palabra.split(',')
 listaf = v_frase.split()
-listat = []
 dic = {}
 
 for i in listap:
@@ -21,13 +20,21 @@ for i in listap:
 
         # print("Lista frase 0: " + str(listap))
 
-print("Diccionario: " + str(dic))
-print("Lista frase 1: " + str(listaf))
+# print("Diccionario: " + str(dic))
+# print("Lista frase 1: " + str(listaf))
 
-for n,m in enumerate(listaf):
-    if m == 'perro':
-        listaf[n] = 10
-        print(listaf)
+for a in dic:
+    # print("val a: " + str(a))
+    for b,c in enumerate(listaf):
+        # print("val b: " + str(b), "val c: " + str(c))
+        if a == c:
+            listaf[b] = dic.get(a)
+# print(listaf)
+
+v_trad = ' '.join(listaf)
+
+print(v_trad)
+
 
 
 
