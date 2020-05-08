@@ -13,6 +13,7 @@ if number_pc == ingresa_num:
 else:
     print("Sigue intentando")
 
+
 ingresa_num = int(input("ingrese un numero3: "))
 
 if number_pc == ingresa_num:
