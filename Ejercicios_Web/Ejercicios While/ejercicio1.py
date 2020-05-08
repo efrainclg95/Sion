@@ -10,3 +10,4 @@ while v_num1 > v_num2:
 
 print(str(v_num2) + " es mayor que: " + str(v_num1))
 print("Los numeros ingresados son: " + str(v_num1) + " y " + str(v_num2))
+
