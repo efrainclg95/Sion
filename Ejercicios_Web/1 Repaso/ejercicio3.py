@@ -31,7 +31,7 @@ for a in dic:
             listaf[b] = dic.get(a)
 # print(listaf)
 
-v_trad = ' '.join(listaf)
+v_trad = '   '.join(listaf)
 
 print(v_trad)
 
