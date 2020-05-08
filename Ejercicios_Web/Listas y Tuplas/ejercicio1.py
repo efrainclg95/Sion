@@ -10,4 +10,3 @@ for i in range(1,6):
 
 print(v_lista)
 # print(v_lista[0])
-
