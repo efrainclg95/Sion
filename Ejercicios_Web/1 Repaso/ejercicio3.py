@@ -6,15 +6,42 @@
 # Si una palabra no está en el diccionario debe dejarla sin traducir.
 
 # v_palabra = str(input("Introduce la lista de palabras y traducciones en formato <<palabra:traducción>> separadas por comas: "))
+# v_frase = str(input("Introduce una frase para traducir: "))
 v_palabra = 'perro:dog,bueno:good'
-lista = v_palabra.split(',')
+v_frase = 'el perro es bueno'
+listap = v_palabra.split(',')
+listaf = v_frase.split()
+listat = []
 dic = {}
 
-print(lista)
+for i in listap:
+    listap = i.split(':')
+    for n,k in enumerate(listap):
+        dic[listap[0]] = k
 
-for i in lista:
-    lista = i.split(':')
-    print(lista)
-    # dic = {i}
-    # print(dic)
+        # print("Lista frase 0: " + str(listap))
+
+print("Diccionario: " + str(dic))
+print("Lista frase 1: " + str(listaf))
+
+for n,m in enumerate(listaf):
+    if m == 'perro':
+        listaf[n] = 10
+        print(listaf)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
