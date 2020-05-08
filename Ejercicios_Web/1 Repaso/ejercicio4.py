@@ -13,14 +13,15 @@ lb = []
 for i in range(len(a)):
     la.append(list(a[i]))
 
-print(la)
+print("lista la: " + str(la))
 
 for j in range(len(b)):
     lb.append(list(b[j]))
 
-print(lb)
+print("lisya lb: " + str(lb))
 
-# print(a[0])
+print(la[0[0]])
+
 
 
 
