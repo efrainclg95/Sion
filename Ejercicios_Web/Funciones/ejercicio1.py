@@ -2,6 +2,6 @@
 
 def f_saludo():
     print("¡Hola amiga!")
-    return
+
 f_saludo()
 
