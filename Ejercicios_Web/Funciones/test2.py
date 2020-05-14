@@ -1,6 +1,6 @@
 ejemplo = [3,7,9,5,3,7,12]
 
-lp = []
+"""lp = []
 li = []
 
 for i in ejemplo:
@@ -10,4 +10,12 @@ for i in ejemplo:
         li.append(i)
         li.sort()
 
-print(lp,li)
+print(lp,li)"""
+
+def f_separal(ejemplo):
+    for i in ejemplo:
+        return i
+
+# print(f_separal(ejemplo))
+f_separal(ejemplo)
+
