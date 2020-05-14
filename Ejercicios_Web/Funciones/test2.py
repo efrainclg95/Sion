@@ -1,6 +1,4 @@
 
-
-
 def menu():
     print('Cambio de moneda')
     v_tipo = int(input("1. cambiar a Dolar\n2. cambiar a Euro\nIngrese opción: "))
