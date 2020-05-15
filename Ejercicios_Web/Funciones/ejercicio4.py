@@ -6,13 +6,13 @@ x = float(input("Ingrese cantidad monetaria actual: "))
 
 
 def operacion(x,y = 21):
-
-    return "Facturación Total IVA 21%: " + str(x + x * y / 100)
-
-
+    if y == 21:
+        return "Facturación Total IVA 21%: " + str(x + x * y / 100)
+    else:
+        return "Facturación Total IVA " + str(y) + "%: " + str(x + x * y / 100)
 
 print(operacion(x))
-
+print(operacion(x,40))
 
 
 
