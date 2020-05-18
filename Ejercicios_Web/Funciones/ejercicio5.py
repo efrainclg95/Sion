@@ -10,8 +10,8 @@ def area_circulo(r):
 def volumen_cilindro(r,h):
     return area_circulo(r)*h
 
-print(area_circulo(80))
-print(volumen_cilindro(80,500))
+print(area_circulo(3))
+print(volumen_cilindro(3,5))
 
 
 """"# Sol 2
