@@ -27,4 +27,4 @@ def f_media(lista):
     return prom
 
 
-print(f_media([1,2,3]))
+print(f_media([1,2]))
