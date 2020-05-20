@@ -1,7 +1,8 @@
 # Escribir una función que reciba una muestra de números en una lista y
 # devuelva un diccionario con su media, varianza y desviación típica.
 
-lista = [1,2,3]
+lista = [1,2,3,4,5]
+dic = {}
 
 def f_media(lista):
     suma = 0
@@ -10,5 +11,12 @@ def f_media(lista):
         media = suma / len(lista)
     return media
 
-print(f_media(lista))
+# print(f_media(lista))
+
+
+
+dic['media'] = f_media(lista)
+
+
+print(dic)
 
