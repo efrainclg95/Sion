@@ -11,7 +11,7 @@ print(media([1,2,3]))"""
 
 # Sol2
 
-lista = [1,2,3,4]
+# lista = [1,2,3,4]
 
 def f_media(lista):
 
@@ -27,4 +27,4 @@ def f_media(lista):
     return prom
 
 
-print(f_media([1,2]))
+print(f_media([1,2,5]))
