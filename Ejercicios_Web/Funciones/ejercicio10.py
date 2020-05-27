@@ -4,6 +4,8 @@
 
 # Estructurado
 
+"""# de binario a decimal
+
 listab = [1,1,0,1,0]
 listad = []
 
@@ -17,7 +19,7 @@ for i,j in enumerate(listab):
     listad.append(oper)
     suma = sum(listad)
 
-print(suma)
+print(suma)"""
 
 
 """# A binario
@@ -38,12 +40,13 @@ print(listar)"""
 
 # Funciones
 
-"""def f_binario(n):
+def f_dec_binario(n):
+
     listai = []
     listar = []
 
-    while n>0:
-        listai.append(n%2)
+    while n > 0:
+        listai.append(n % 2)
         n = n//2
 
     for i in reversed(listai):
@@ -51,4 +54,28 @@ print(listar)"""
 
     return listar
 
-print(f_binario(5))"""
+
+
+
+def f_bin_decimal(listab):
+
+    listab = listab
+    listad = []
+
+    for i,j in enumerate(listab):
+
+        cal = 2**i
+        listab.reverse()
+
+        oper = cal * listab[i]
+
+        listad.append(oper)
+        suma = sum(listad)
+
+    return suma
+
+print(f_dec_binario(4))
+print(f_bin_decimal([1,0,0]))
+
+
+
