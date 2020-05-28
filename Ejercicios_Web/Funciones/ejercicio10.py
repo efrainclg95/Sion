@@ -74,8 +74,8 @@ def f_bin_decimal(listab):
 
     return suma
 
-print(f_dec_binario(4))
-print(f_bin_decimal([1,0,0]))
+print(f_dec_binario(3))
+print(f_bin_decimal([1,1]))
 
 
 
