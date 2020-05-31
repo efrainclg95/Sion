@@ -15,5 +15,15 @@ for j,k in enumerate(lista):
 print(dic)
 
 
+l_maximo = []
 for keys,values in dic.items():
-    print(keys,values)
+    l_maximo.append(values)
+    maximo = max(l_maximo)
+
+    if dic.get(keys) == maximo:
+        tupla = (keys,dic.get(keys))
+
+print(tupla)
+
+
+
