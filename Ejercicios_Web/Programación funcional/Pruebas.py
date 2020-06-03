@@ -20,4 +20,14 @@ def par(n):
 asignaturas = ['matematicas','fisica','quimica','economia']
 notas = [12,8.5,14,12]
 
-print(dict(zip(asignaturas,notas)))
+# print(dict(zip(asignaturas,notas)))
+
+binomio_cuadrado = lambda a,b : a**2 + 2*a*b + b**2
+binomio_cuadrado(2,3)
+
+# print(binomio_cuadrado(2,3))
+
+area_triangulo = lambda base,altura : (base * altura)/2
+# print(area_triangulo(7,5))
+# print(area_triangulo(9,12343434))
+
