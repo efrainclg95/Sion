@@ -52,9 +52,14 @@ notas = [12,8.5,14,12]
 import functools
 
 def multiplicar(x, y):
-    print(x * y)  # muestra el resultado parcial
+    # print(x * y)  # muestra el resultado parcial
     return x * y
 
 lista = [1, 2, 3, 4]
 valor = functools.reduce(multiplicar, lista)
 print(valor)  # muestra el resultado final
+
+def producto(n,m):
+    return n * m
+
+# print(functools.reduce(producto, range(1,5)))
