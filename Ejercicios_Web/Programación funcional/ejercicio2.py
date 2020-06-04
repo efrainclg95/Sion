@@ -6,7 +6,9 @@ y el resultado de aplicar la función a esos enteros."""
 
 from math import sin,cos,tan,exp,log
 
-f = 'log'
+'''Estructurado
+
+f = 'tan'
 n = 10
 
 dic_trigo = {'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
@@ -17,5 +19,20 @@ for i in range(1,10+1):
 
 
 for j in dic_resultado:
-    print(j, '\t', dic_resultado.get(j))
+    print(j, '\t', dic_resultado.get(j))'''
 
+def f_trigo(f,n):
+
+    dic_trigo = {'sin': sin, 'cos': cos, 'tan': tan, 'exp': exp, 'log': log}
+    dic_resultado = {}
+
+    for i in range(1, n + 1):
+        dic_resultado[i] = dic_trigo[f](i)
+
+    for j in dic_resultado:
+        print(j, '\t', dic_resultado.get(j))
+    return
+
+
+
+print(f_trigo('log',5))
