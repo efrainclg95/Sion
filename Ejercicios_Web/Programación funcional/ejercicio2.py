@@ -33,6 +33,12 @@ def f_trigo(f,n):
         print(j, '\t', dic_resultado.get(j))
     return
 
+def f_calculadora_trigo():
 
+    f = str(input('Ingrese la función (sin, cos, tan, exp, log): '))
+    n = int(input('Ingrese un número entero: '))
 
-print(f_trigo('log',5))
+    f_trigo(f,n)
+
+f_calculadora_trigo()
+
