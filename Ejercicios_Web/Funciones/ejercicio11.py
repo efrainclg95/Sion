@@ -27,7 +27,7 @@ def out_tupla(cadena):
 
     return (tupla)
 
-texto = 'Felipe es un niño hermoso y es bebito bello niño es'
+texto = 'Felipe es un niño hermoso y  es es bebito bello niño es'
 
 
 print(out_diccionario(texto))
