@@ -31,4 +31,5 @@ texto = 'Felipe es un niño hermoso y  es es bebito bello niño es'
 
 
 print(out_diccionario(texto))
+
 print(out_tupla(out_diccionario(texto)))
