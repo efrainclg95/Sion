@@ -40,6 +40,7 @@ def califica(n):
     else:
         return 'MH'
 
+
 def notas(lista):
     return list(map(califica,lista))
 
