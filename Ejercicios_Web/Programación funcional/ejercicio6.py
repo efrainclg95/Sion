@@ -44,3 +44,4 @@ def notas(lista):
     return list(map(califica,lista))
 
 print(notas([4,5,3.2,9,10]))
+
