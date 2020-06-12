@@ -15,14 +15,6 @@ def califica(n):
     else:
         return 'MH'
 
-'''def dic_califica(scores):
-
-    asuntos = map(str.upper, scores.keys())
-    grades = map(califica, scores.values())
-
-    lista_califica = dict(zip(asuntos, grades))
-
-    return lista_califica'''
 
 def dic_califica(scores):
     dic_aprobados = {}
@@ -31,5 +23,5 @@ def dic_califica(scores):
             dic_aprobados[keys.upper()] = califica(values)
     return dic_aprobados
 
-print('Calificaciones: ',dic_califica({'Matemáticas':6.5, 'Física':5, 'Química':3.4, 'Economía':8.2, 'Historia':9.7, 'Programación':10}))
+print('Calificaciones aprobadas: ',dic_califica({'Matemáticas':6.5, 'Física':5, 'Química':3.4, 'Economía':8.2, 'Historia':9.7, 'Programación':10}))
 
