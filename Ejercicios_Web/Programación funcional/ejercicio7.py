@@ -48,9 +48,6 @@ def dic_califica(scores):
     asuntos = map(str.upper, scores.keys())
     grades = map(califica, scores.values())
 
-    print('asuntos: ',asuntos)
-    print('grades: ',grades)
-
     return dict(zip(asuntos, grades))
 
 print(dic_califica({'Matemáticas':6.5, 'Física':5, 'Química':3.4, 'Economía':8.2, 'Historia':9.7, 'Programación':10}))
