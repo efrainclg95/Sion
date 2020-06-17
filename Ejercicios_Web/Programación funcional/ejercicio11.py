@@ -17,4 +17,8 @@ def atipico(muestra):
 def datos_atipicos(muestra):
     return list(filter(atipico(muestra), muestra))
 
-print(datos_atipicos([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1000]))
+print(datos_atipicos([1,2,3,4,5,6,7,8,9,10,1000]))
+
+
+
+
