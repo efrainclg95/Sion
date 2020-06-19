@@ -2,9 +2,16 @@
 Después debe mostrar por pantalla el mensaje <nombre> tiene <edad> años, vive en <dirección> y su número de teléfono es <teléfono>."""
 
 
-def save_dic(nombre,edad):
-    dic = {nombre}
-    dic[nombre] = nombre
-    return dic
+# Sol 1
 
-print(save_dic('efrain',35))
+def save_dic(nombre,edad,direccion,telefono):
+    dic = {'nombre': nombre, 'edad': edad, 'direccion': direccion, 'telefono': telefono}
+    for keys,values in dic.items():
+        dic[keys] = values
+        # print(str(dic.get('nombre')) + ' tiene' + str(dic.get('edad')) + ' vive en ' + str(dic.get('direccion')) + ' y su número telefonico es: ' + str(dic.get('telefono')))
+    # return dic
+    return dic,(str(dic.get('nombre')) + ' tiene ' + str(dic.get('edad')) + ' años, vive en ' + str(dic.get('direccion')) + ' y su número telefonico es: ' + str(dic.get('telefono')))
+
+print(save_dic('efrain',35,'betania',963752034))
+
+
