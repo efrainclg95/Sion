@@ -22,12 +22,16 @@ def guarda_precio_dic(p_platano,p_manzana,p_pera,p_naranja):
     return dic_fruta_precio
 
 def usuario(fruta,kilos):
-    opera = guarda_precio_dic(p_platano,p_manzana,p_pera,p_naranja).get(fruta)*kilos
-    cadena = str(opera),' Soles es el precio de ',fruta,' para llevar'
-    cadena = ''.join(cadena) # convierte de tupla a cadena
-    return cadena
+    if fruta in guarda_precio_dic(p_platano,p_manzana,p_pera,p_naranja):
+        opera = guarda_precio_dic(p_platano, p_manzana, p_pera, p_naranja).get(fruta) * kilos
+        cadena = str(opera), ' Soles es el precio de ', fruta, ' para llevar'
+        cadena = ''.join(cadena)  # convierte de tupla a cadena
+        return cadena
+    else:
+        return 'Fruta no existe'
 
 print(usuario(fruta,kilos))
+
 
 
 
