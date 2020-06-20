@@ -4,11 +4,17 @@ que se le pida al usuario. Cada vez que se añada un nuevo dato debe imprimirse 
 
 dato = str(input('Que dato quiere ingresar: '))
 
-
 def dato_persona(dato):
     dic = {}
     dic[dato] = input(dato + ': ')
+    continua = str(input('Quieres añadir más información (Si/No): '))
+
+    while continua == 'Si':
+        dato = str(input('Que dato quiere ingresar: '))
+        dic[dato] = input(dato + ': ')
+        continua = str(input('Quieres añadir más información (Si/No): '))
 
     return dic
 
 print(dato_persona(dato))
+
