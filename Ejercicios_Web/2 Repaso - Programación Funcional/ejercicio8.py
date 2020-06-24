@@ -11,13 +11,13 @@ v_palabra = 'el:the,carro:car,papá:father'
 
 def f_palabra(v_palabra):
     dic = {}
+    lista2 = []
     lista1 = v_palabra.split(',')
     for i in lista1:
         lista2 = i.split(':')
-        for j in lista2:
-            dic[lista1[0]] = lista1[2]
-
+        dic[i[0]] = i[1]
     print(dic)
+
 
 print(f_palabra(v_palabra))
 
