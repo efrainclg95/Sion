@@ -7,7 +7,7 @@ Después pedirá una frase en español y utilizará el diccionario para traducir
 Si una palabra no está en el diccionario debe dejarla sin traducir."""
 
 # v_palabra = str(input('Ingrese palabras <palabra>:<traducción>: '))
-v_palabra = 'el:the,carro:car,papá:father'
+v_palabra = 'el:the,carro:car,papá:father,es:is'
 
 def f_palabra(v_palabra):
     dic = {}
@@ -15,8 +15,8 @@ def f_palabra(v_palabra):
     lista1 = v_palabra.split(',')
     for i in lista1:
         lista2 = i.split(':')
-        dic[i[0]] = i[1]
-    print(dic)
+        dic[lista2[0]] = lista2[1]
+    return dic
 
 
 print(f_palabra(v_palabra))
