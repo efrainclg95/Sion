@@ -19,18 +19,14 @@ def f_palabra(v_traductor):
 
 def f_traduccion(v_frase):
     lista3 = v_frase.split()
-    for n,k in enumerate(lista3):
-        print(k)
+    # print('lista3: ',lista3)
+    for keys,values in f_palabra(v_traductor).items():
+        for j,k in enumerate(lista3):
+            if keys == lista3[j]:
+                lista3[j] = f_palabra(v_traductor).get(keys)
+                lista3 = ' '.join(lista3)
+    return lista3
 
-
-
-
-
-
-
-
-print(f_palabra(v_traductor))
-print(f_traduccion('el carro de papá es un volkswagen'))
-
-
+# print(f_palabra(v_traductor))
+print(f_traduccion('el carro de papá es un volkswagen gris'))
 
