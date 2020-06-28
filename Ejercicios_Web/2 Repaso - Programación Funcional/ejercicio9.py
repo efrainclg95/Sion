@@ -5,18 +5,33 @@ Si desea añadir una nueva factura se preguntará por el número de factura y su
 Si se desea pagar una factura se preguntará por el número de factura y se eliminará del diccionario.
 Después de cada operación el programa debe mostrar por pantalla la cantidad cobrada hasta el momento y la cantidad pendiente de cobro."""
 
-v_pregunta = ''
+v_pregunta = str(input('F1 Añadir una nueva factura (A)\nPagarla (P)\nTerminar (T)\nIngrese: '))
+
+# while v_pregunta == 'A' or v_pregunta == 'P' or v_pregunta == 'T':
+    # print('True')
+
+def funcion1(v_pregunta):
+    while v_pregunta == 'A' or v_pregunta == 'P' or v_pregunta == 'T':
+        return v_pregunta
+
+
+print(funcion1(v_pregunta))
+
+'''v_pregunta = ''
 
 def funcion1(v_pregunta):
 
-    v_pregunta = str(input('¿Quieres añadir una nueva factura (A), pagarla (P) o terminar (T)? '))
-
-    print(v_pregunta)
-
-
-    while funcion1(v_pregunta) == 'A':
-        print('while A')
-
+    v_pregunta = str(input('F1 Añadir una nueva factura (A)\nPagarla (P)\nTerminar (T)\nIngrese: '))
     return v_pregunta
 
-print(funcion1(v_pregunta))
+def funcion2(b_bucle):
+
+    if funcion1(v_pregunta) == 'A':
+        print('True A')
+    elif funcion1(v_pregunta) == 'P':
+        print('True P')
+    elif funcion1(v_pregunta) == 'T':
+        print('True T')
+
+# print(funcion1(v_pregunta))
+print(funcion2('b_bucle'))'''
