@@ -5,26 +5,16 @@ Si desea añadir una nueva factura se preguntará por el número de factura y su
 Si se desea pagar una factura se preguntará por el número de factura y se eliminará del diccionario.
 Después de cada operación el programa debe mostrar por pantalla la cantidad cobrada hasta el momento y la cantidad pendiente de cobro."""
 
+def funcion1(pregunta):
+    v_respuesta = pregunta
+    return v_respuesta
 
-v_pregunta = 'A'
-dic = {}
 
-def funcion1(v_pregunta):
-    while v_pregunta == 'A':
-        v_pregunta = str(input('Añadir una nueva factura (A)\nPagarla (P)\nTerminar (T)\nIngrese: '))
-        if v_pregunta == 'A':
-            v_num_factura = int(input('Introduce el número de la factura: '))
-            v_coste_factura = float(input('Introduce el coste de la factura: '))
-            dic[v_num_factura] = v_coste_factura
-            print(dic)
-            # return dic
 
-        else:
-            print('Sale del if')
 
-    print('Sale de while')
+print(funcion1(input('¿Quieres añadir una nueva factura (A), pagarla (P) o terminar (T)?: ')))
 
-print(funcion1(v_pregunta))
+
 
 
 '''¿Quieres añadir una nueva factura (A), pagarla (P) o terminar (T)? A
