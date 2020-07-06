@@ -27,4 +27,5 @@ def funcion1(respuesta):
         elif respuesta == 'T':
             return 'BYE'
 
+
 print(funcion1('A'))
