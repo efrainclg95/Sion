@@ -11,7 +11,6 @@ def input_num(n):
 
     for i in range(1,13):
         tabla = i * n
-        # print(n,' x ',i, ' = ',tabla)
         f.write(str(n) + ' x ' + str(i) + ' = ' + str(tabla) + '\n')
     f.close()
 
