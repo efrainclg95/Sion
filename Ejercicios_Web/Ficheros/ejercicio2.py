@@ -6,12 +6,17 @@ Si el fichero no existe debe mostrar un mensaje por pantalla informando de ello"
 # Sol 1
 
 n = int(input('Ingrese un número del 1 al 10: '))
-
 nombre_archivo = 'tabla-' + str(n) + '.txt'
 
-p = open(nombre_archivo,'r')
+try:
+    muestra = open(nombre_archivo,'r')
+except FileNotFoundError:
+    print('No existe el archivo con la tabla del #',n)
 
-print(p.read())
+else:
+    print(muestra.read())
+
+# print(muestra.read())
 
 # Sol 2
 
