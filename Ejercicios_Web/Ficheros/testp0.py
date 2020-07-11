@@ -1,12 +1,10 @@
-f = open('virus.txt','w')
-f.write('es un virus 11 pertenece a felipus ')
+f = open('virus_1','w')
+f.write('Es un virus 1\n')
 
-f = open('virus.txt','a')
-f.write('\nno pertenece a efrain\nsi a karina')
+f = open('virus_1','a')
+f.write('Felipe y sus padres aman a Dios')
 
-f = open('virus.txt','r')
+f = open('virus_1','r')
 print(f.read())
+
 f.close()
-
-
-
