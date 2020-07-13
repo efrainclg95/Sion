@@ -6,10 +6,20 @@ Si el fichero no existe debe mostrar un mensaje por pantalla informando de ello.
 n = int(input('Ingrese valor de n: '))
 m = int(input('Ingrese valor de m: '))
 
-ficha = 'tabla-' + str(n) + '.txt'
+file = 'tabla-' + str(n) + '.txt'
 
-ficha = open(ficha,'r')
-print(ficha.read())
+# ficha = open(ficha,'r')
+# print(ficha.readlines())
+
+try:
+    fichero = open(file,'r')
+    # print(fichero.readlines())
+except FileNotFoundError:
+    print('No existe el fichero con la tabla del ', n)
+else:
+    lineas = fichero.readlines()
+    print(lineas)
+
 
 
 
