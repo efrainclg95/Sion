@@ -1,22 +1,11 @@
-'''f = open('virus_1','w')
-f.write('Es un virus 1\n')
+fichero = open('virus.txt','w')
+fichero.write('es un virus\n')
 
-f = open('virus_1','a')
-f.write('Felipe y sus padres aman a Dios')
+fichero = open('virus.txt','a')
+fichero.write('creado por felipe')
 
-f = open('virus_1','r')
-print(f.read())
+fichero = open('virus.txt','r')
+print(fichero.read())
 
-f.close()'''
+fichero.close()
 
-import os
-f = 'virus_1_1.txt'
-if os.path.isfile(f):
-    os.rename(f, 'virus_1_1.txt')
-else:
-    print('el fichero ',f,' no existe')
-
-if os.path.isfile(f):
-    os.remove(f)
-else:
-    print('el fichero ',f,' no existe')
