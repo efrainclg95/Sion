@@ -6,20 +6,12 @@ Si el fichero no existe debe mostrar un mensaje por pantalla informando de ello.
 n = int(input('Ingrese valor de n: '))
 m = int(input('Ingrese valor de m: '))
 
-file = 'tabla-' + str(n) + '.txt'
-
-# ficha = open(ficha,'r')
-# print(ficha.readlines())
+archivo = 'tabla-' + str(n) + '.txt'
 
 try:
-    fichero = open(file,'r')
-    # print(fichero.readlines())
+    fichero = open(archivo,'r')
 except FileNotFoundError:
-    print('No existe el fichero con la tabla del ', n)
+    print('No existe tabla de multiplicar de:',n)
 else:
-    lineas = fichero.readlines()
-    print(lineas)
-
-
-
-
+    lista = fichero.readlines()
+    print(lista[m-1])
