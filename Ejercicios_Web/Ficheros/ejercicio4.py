@@ -8,6 +8,7 @@ def lectura_url(www):
     datos = f.read()
     print(datos.decode('utf-8'))
 
+
 print(lectura_url('https://raw.githubusercontent.com/asalber/asalber.github.io/master/README.md'))
 
 
