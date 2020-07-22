@@ -19,6 +19,7 @@ def open_f(url):
             lista1 = i.split('\t')
             print(lista1)
 
+
             '''lista2 = []
             lista2.append(lista1[0])
             print(lista2)'''
