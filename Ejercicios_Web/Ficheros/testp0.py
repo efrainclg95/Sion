@@ -1,11 +1,9 @@
-fichero = open('virus.txt','w')
-fichero.write('es un virus\n')
+# creación escritura
 
-fichero = open('virus.txt','a')
-fichero.write('creado por felipe')
+f = open('bienvenido.txt','w')
+f.write('Bienvenido a Python\n')
 
-fichero = open('virus.txt','r')
-print(fichero.read())
+# añadiendo datos al fichero
 
-fichero.close()
-
+f = open('bienvenido.txt','a')
+f.write('Aprendamos a programar')
