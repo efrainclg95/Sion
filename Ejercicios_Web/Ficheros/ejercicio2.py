@@ -5,7 +5,7 @@ Si el fichero no existe debe mostrar un mensaje por pantalla informando de ello"
 
 # Sol 1
 
-n = int(input('Ingrese un número del 1 al 10: '))
+"""n = int(input('Ingrese un número del 1 al 10: '))
 nombre_archivo = 'tabla-' + str(n) + '.txt'
 
 try:
@@ -16,7 +16,7 @@ except FileNotFoundError:
 else:
     print(muestra.read())
 
-# print(muestra.read())
+# print(muestra.read())"""
 
 # Sol 2
 
@@ -28,3 +28,15 @@ except FileNotFoundError:
     print('No existe el fichero con la tabla del', n)
 else:
     print(f.read())"""
+
+# Sol 3
+
+n = int(input('Ingrese un número entero del 1 al 10: '))
+fn = 'Tabla-' + str(n) + '.txt'
+
+try:
+    f = open(fn,'r')
+except FileNotFoundError:
+    print('No existe el fichero: ',fn)
+else:
+    print(f.read())
