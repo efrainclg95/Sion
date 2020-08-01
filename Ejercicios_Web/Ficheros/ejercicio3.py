@@ -3,7 +3,9 @@ lea el fichero tabla-n.txt con la tabla de multiplicar de ese número,
 y muestre por pantalla la línea m del fichero.
 Si el fichero no existe debe mostrar un mensaje por pantalla informando de ello."""
 
-n = int(input('Ingrese valor de n: '))
+# Sol 1
+
+"""n = int(input('Ingrese valor de n: '))
 m = int(input('Ingrese valor de m: '))
 
 archivo = 'tabla-' + str(n) + '.txt'
@@ -14,4 +16,19 @@ except FileNotFoundError:
     print('No existe tabla de multiplicar de:',n)
 else:
     lista = fichero.readlines()
-    print(lista[m-1])
+    print(lista[m-1])"""
+
+# Sol 2
+
+n = int(input('Ingrese valor de n: '))
+m = int(input('Ingrese valor de m: '))
+
+fn = 'Tabla-' + str(n) + '.txt'
+
+try:
+    f = open(fn,'r')
+except FileNotFoundError:
+    print('Fichero no existe')
+else:
+    print(f.read())
+
