@@ -30,5 +30,7 @@ try:
 except FileNotFoundError:
     print('Fichero no existe')
 else:
-    print(f.read())
+    f = f.readlines()
+    print(f[m-1])
+
 
