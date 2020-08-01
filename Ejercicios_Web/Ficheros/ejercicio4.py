@@ -1,9 +1,9 @@
 """Escribir un programa que acceda a un fichero de internet mediante su url
 y muestre por pantalla el número de palabras que contiene."""
 
-'''# Sol1
+# Sol 1
 
-from urllib import request
+"""from urllib import request
 
 def lectura_url(www):
     f = request.urlopen(www)
@@ -16,11 +16,11 @@ def num_palabras(finter):
     return len(contador_lista)
 
 # print(lectura_url('https://raw.githubusercontent.com/asalber/asalber.github.io/master/README.md'))
-print(num_palabras(lectura_url('https://www.gutenberg.org/cache/epub/2000/pg2000.txt')))'''
+print(num_palabras(lectura_url('https://www.gutenberg.org/cache/epub/2000/pg2000.txt')))"""
 
-# Sol2
+# Sol 2
 
-def words_file(url):
+""" def words_file(url):
     from urllib import request
     from urllib.error import URLError
 
@@ -33,4 +33,14 @@ def words_file(url):
         return len(content.split())
 
 print(words_file('https://www.gutenberg.org/cache/epub/2000/mpg2000.txt'))
-print(words_file('https://no-existe.txt'))
+print(words_file('https://no-existe.txt'))"""
+
+# Sol 3
+
+from urllib import request
+
+f = request.urlopen('https://www.gutenberg.org/cache/epub/2000/pg2000.txt')
+contenido = f.read()
+contenido = contenido.split()
+
+print(len(contenido))
