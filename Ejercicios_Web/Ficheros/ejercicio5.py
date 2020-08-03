@@ -4,35 +4,13 @@ pregunte por las iniciales de un país y muestre el PIB per cápita de ese país
 
 # Sol 1
 
-def open_f(url):
+def open_www(www):
     from urllib import request
-    from urllib.error import URLError
+    f = request.urlopen(www)
+    contenido = f.read()
+    print(contenido.decode('utf-8'))
 
-    try:
-        file = request.urlopen(url)
-    except URLError:
-        print('No existe URL dada')
-    else:
-        content = file.read().decode('utf-8').split('\n')
-        for p,i in enumerate(content):
-            # lista = i.split()
-            lista1 = i.split('\t')
-            print(lista1)
-
-
-            '''lista2 = []
-            lista2.append(lista1[0])
-            print(lista2)'''
-
-
-
-        # content = content.split('\t')
-        # content = content.split()
-        # return content
-
-
-print(open_f('https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/sdg_08_10.tsv.gz&unzip=true'))
-
+print(open_www('https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/sdg_08_10.tsv.gz&unzip=true'))
 
 
 # Sol 2
