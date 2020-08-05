@@ -14,7 +14,10 @@ def open_www(www):
     # print(lista0)
 
     for i in lista0:
-        print(i.split('\t'))
+        lista1 = i.split('\t')
+        cadena0 = lista1[0]
+        lista2 = cadena0.split(',')
+        print(lista2[2])
 
 print(open_www('https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/sdg_08_10.tsv.gz&unzip=true'))
 
