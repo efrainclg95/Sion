@@ -8,7 +8,13 @@ def open_www(www):
     from urllib import request
     f = request.urlopen(www)
     contenido = f.read()
-    print(contenido.decode('utf-8'))
+    # print(contenido.decode('utf-8'))
+
+    lista0 = contenido.decode('utf-8').split('\n')
+    # print(lista0)
+
+    for i in lista0:
+        print(i.split('\t'))
 
 print(open_www('https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/sdg_08_10.tsv.gz&unzip=true'))
 
