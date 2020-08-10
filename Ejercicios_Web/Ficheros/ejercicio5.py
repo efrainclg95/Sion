@@ -14,11 +14,30 @@ def open_www(www):
     # print(lista0)
 
     for i in lista0:
-        lista1 = i.split('\t')
-        cadena0 = lista1[0]
-        lista2 = cadena0.split(',')[2]
-        # print(lista2)
-        print(cadena0)
+        lista0 = i.split('\t')
+        lista0 = (lista0[0].split(',')[2])
+        lista0 = list(lista0.split(','))
+        print(lista0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 print(open_www('https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/sdg_08_10.tsv.gz&unzip=true'))
 
@@ -37,10 +56,16 @@ print(open_www('https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDow
         data = file.read().decode('utf-8').split('\n')
         data = [i.split('\t') for i in data]
         data = [list(map(str.strip, i)) for i in data]
+
         for i in data:
             i[0] = i[0].split(',')[-1]
+
         data[0][0] = 'years'
+
         data = {i[0]: i[1:] for i in data}
+        
+        print(data)
+
         result = {data['years'][i]: data[country][i] for i in range(len(data['years']))}
 
         return result
@@ -49,4 +74,6 @@ country = input('Introduce el código de un país: ')
 print('Producto Interior Bruto per cápita de', country)
 print('Año', '\t', 'PIB')
 for year, pib in open_f('https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/sdg_08_10.tsv.gz&unzip=true').items():
-    print(year, '\t', pib)'''
+    print(year, '\t', pib)
+
+print(open_f('https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/sdg_08_10.tsv.gz&unzip=true'))'''
