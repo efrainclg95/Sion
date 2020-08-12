@@ -10,26 +10,9 @@ def open_www(www):
     contenido = f.read()
     # print(contenido.decode('utf-8'))
 
-    lista0 = contenido.decode('utf-8').split('\n')
-    # print(lista0)
-
-    for i in lista0:
-        lista0 = i.split('\t')
-        lista0 = (lista0[0].split(',')[2])
-        lista0 = list(lista0.split(','))
-        print(lista0)
-
-
-
-
-
-
-
-
-
-
-
-
+    lista0 = contenido.decode('utf-8').strip()
+    lista0 = lista0.split('\n')
+    print(lista0)
 
 
 
