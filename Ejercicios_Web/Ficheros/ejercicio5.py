@@ -8,13 +8,19 @@ def open_www(www):
     from urllib import request
     f = request.urlopen(www)
     contenido = f.read()
-    # print(contenido.decode('utf-8'))
 
     lista0 = contenido.decode('utf-8')
     lista0 = lista0.split('\n')
 
     for j,k in enumerate(lista0):
-        print(j,k)
+        # lista0 = list(k.split())
+        lista0 = list(k.split('\t'))
+
+        if j == 0:
+            print(lista0) # Lista de Tiempo = lista0
+
+
+
 
 
 
