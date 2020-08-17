@@ -10,13 +10,11 @@ def open_www(www):
     contenido = f.read()
     # print(contenido.decode('utf-8'))
 
-    lista0 = contenido.decode('utf-8').strip()
+    lista0 = contenido.decode('utf-8')
     lista0 = lista0.split('\n')
-    print(lista0)
 
-
-
-
+    for j,k in enumerate(lista0):
+        print(j,k)
 
 
 
