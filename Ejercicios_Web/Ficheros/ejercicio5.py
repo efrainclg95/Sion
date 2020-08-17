@@ -17,10 +17,9 @@ def open_www(www):
         lista0 = list(k.split('\t'))
 
         if j == 0:
-            print(lista0) # Lista de Tiempo = lista0
-
-
-
+            lista0.pop(0)
+            lista_tiempo = lista0
+            print(lista_tiempo) # Lista de Tiempo = lista0
 
 
 
