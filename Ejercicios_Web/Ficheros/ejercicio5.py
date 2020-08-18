@@ -24,6 +24,10 @@ def open_www(www):
             j > 0
             lista1 = list(k.split('\t'))
             lista_pais = lista1
+
+            lista_pais = lista_pais[0]
+            lista_pais = lista_pais[19:30] # Se obtiene los prefijos de cada pais
+
             print(lista_pais)
 
 
