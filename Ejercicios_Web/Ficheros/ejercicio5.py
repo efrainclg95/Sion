@@ -19,7 +19,13 @@ def open_www(www):
         if j == 0:
             lista0.pop(0)
             lista_tiempo = lista0
-            print(lista_tiempo) # Lista de Tiempo = lista0
+            # print(lista_tiempo) # Lista de Tiempo = lista_tiempo
+        else:
+            j > 0
+            lista1 = list(k.split('\t'))
+            lista_pais = lista1
+            print(lista_pais)
+
 
 
 
