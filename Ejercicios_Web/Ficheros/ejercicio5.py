@@ -16,19 +16,33 @@ def open_www(www):
         # lista0 = list(k.split())
         lista0 = list(k.split('\t'))
 
+        # print(lista0)
+
         if j == 0:
             lista0.pop(0)
             lista_tiempo = lista0
-            # print(lista_tiempo) # Lista de Tiempo = lista_tiempo
-        else:
-            j > 0
+            print(lista_tiempo) # Lista de Tiempo = lista_tiempo
+
+        elif j > 0:
             lista1 = list(k.split('\t'))
-            lista_pais = lista1
+            prefijos = lista1
 
-            lista_pais = lista_pais[0]
-            lista_pais = lista_pais[19:30] # Se obtiene los prefijos de cada pais
+            prefijos = prefijos[0]
+            prefijos = prefijos[19:30] # Se obtiene los prefijos de cada pais
 
-            print(lista_pais)
+            prefijos = list(prefijos.split(','))
+
+
+
+            '''for i in prefijos:
+                dic = {}
+                dic[i] = 'hola'
+
+                print(dic)'''
+
+
+
+
 
 
 
