@@ -21,24 +21,26 @@ def open_www(www):
         if j == 0:
             lista0.pop(0)
             lista_tiempo = lista0
-            print(lista_tiempo) # Lista de Tiempo = lista_tiempo
+            # print(lista_tiempo) # Lista de Tiempo = lista_tiempo
 
         elif j > 0:
             lista1 = list(k.split('\t'))
-            prefijos = lista1
+            # print(lista1)
 
+            prefijos = lista1
             prefijos = prefijos[0]
             prefijos = prefijos[19:30] # Se obtiene los prefijos de cada pais
-
             prefijos = list(prefijos.split(','))
+            # print(prefijos)
 
+            lista1.pop(0)
+            lista_pib = lista1
+            # print(lista_pib) # Se obtiene la lista PIB
 
-
-            '''for i in prefijos:
+            for i in prefijos:
                 dic = {}
-                dic[i] = 'hola'
-
-                print(dic)'''
+                dic[i] = lista_pib
+                print(dic) # Se obtiene diccionario prefijo pais + lista PIB
 
 
 
