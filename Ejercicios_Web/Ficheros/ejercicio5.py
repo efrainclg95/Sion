@@ -40,15 +40,15 @@ def open_www(www):
             for i in prefijos:
                 dic = {}
                 dic[i] = lista_pib
-                print(dic) # Se obtiene diccionario prefijo pais + lista PIB
+                # print(dic) # Se obtiene diccionario prefijo pais + lista PIB
 
+                for keys,values in dic.items():
+                    lista_pais = list(values)
 
+                    if keys == 'AT':
 
-
-
-
-
-
+                        resultado = list(zip(lista_tiempo, lista_pais))
+                        return (resultado)
 
 
 print(open_www('https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/sdg_08_10.tsv.gz&unzip=true'))
