@@ -4,6 +4,9 @@ pregunte por las iniciales de un país y muestre el PIB per cápita de ese país
 
 # Sol 1
 
+
+v_pais = input('Introduce el código de un país: ')
+
 def open_www(www):
     from urllib import request
     f = request.urlopen(www)
@@ -45,7 +48,7 @@ def open_www(www):
                 for keys,values in dic.items():
                     lista_pais = list(values)
 
-                    if keys == 'AT':
+                    if keys == v_pais:
 
                         resultado = list(zip(lista_tiempo, lista_pais))
                         return (resultado)
