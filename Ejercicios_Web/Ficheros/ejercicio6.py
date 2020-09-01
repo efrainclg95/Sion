@@ -7,13 +7,23 @@ su teléfono deben aparecer separados por comas y cada cliente en una línea dis
 # Sol1
 
 def f_menu():
-    print('Gestión del listin telefónico')
+    print('\nGestión del listin telefónico')
     print('-----------------------------')
     print('1. Consultar un teléfono')
     print('2. Añadir un teléfono')
     print('3. Eliminar un teléfono')
     print('4. Crear el listin')
     print('0. Terminar\n')
+    global v_option
     v_option = int(input('Ingrese el número de la opción: '))
+    return v_option
 
-print(f_menu())
+def f_bucle(option):
+    print('Opción ingresada -->',v_option)
+    while v_option != 0:
+        f_menu()
+    return ('Hasta la vista baby')
+
+
+
+print(f_bucle(f_menu()))
