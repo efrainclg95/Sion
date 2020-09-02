@@ -19,29 +19,34 @@ def f_menu():
     return v_option
 
 def f_bucle(option):
-    print('Opción ingresada -->', v_option)
+    print('Opción ingresada -->', option)
 
-    while v_option == 0 or v_option == 1 or v_option == 2 or v_option == 3 or v_option == 4:
+    while option == 0 or option == 1 or option == 2 or option == 3 or option == 4:
 
-        if v_option == 1:
+        if option == 1:
             f_option1()
             f_bucle(f_menu())
 
-        elif v_option == 2:
+        elif option == 2:
             f_option2()
             f_bucle(f_menu())
 
-        elif v_option == 3:
+        elif option == 3:
             f_option3()
             f_bucle(f_menu())
 
-        elif v_option == 4:
+        elif option == 4:
             f_option4()
             f_bucle(f_menu())
 
-        elif v_option == 0:
-            print('Hasta pronto amiguitos')
+        elif option == 0:
+            print('Hasta la vista baby')
         break
+
+    else:
+        print('Ingrese una opción válida')
+        f_bucle(f_menu())
+
 
 def f_option1():
     print('opcion 1')
