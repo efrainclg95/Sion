@@ -58,7 +58,7 @@ def f_option3():
     print('opcion 3')
 
 def f_option4():
-    print('opcion 3')
+    print('opcion 4')
 
 print(f_bucle(f_menu()))
 
