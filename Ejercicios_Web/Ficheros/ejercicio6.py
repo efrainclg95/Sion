@@ -49,7 +49,8 @@ def f_bucle(option):
 
 
 def f_option1():
-    print('opcion 1')
+    '''print('opcion 1')'''
+
 
 def f_option2():
     print('opcion 2')
