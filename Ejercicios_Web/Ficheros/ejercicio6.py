@@ -49,7 +49,6 @@ def f_bucle(option):
 
 
 def f_option1():
-    '''print('opcion 1')'''
     customer_name = str(input('Introduce el nombre del cliente: '))
     try:
         file = open('listin.txt')
