@@ -6,6 +6,10 @@ su teléfono deben aparecer separados por comas y cada cliente en una línea dis
 
 # Sol1
 
+def f_listin():
+    listin = str('listin.txt')
+    return listin
+
 def f_menu():
     print('\nGestión del listin telefónico')
     print('-----------------------------')
@@ -47,7 +51,6 @@ def f_bucle(option):
         print('Ingrese una opción válida')
         f_bucle(f_menu())
 
-
 def f_option1():
     customer_name = str(input('Introduce el nombre del cliente: '))
     try:
@@ -55,13 +58,15 @@ def f_option1():
     except FileNotFoundError:
         print('El fichero no existe :(')
     else:
-        print(file.read())
-
-
-
+        print(file.read()) # pendiente
 
 def f_option2():
-    print('opcion 2')
+    # print('opcion 2')
+    customer_name = str(input('Introduce el nombre del cliente: '))
+    customer_phone = int(input('Introduce el teléfono del cliente: '))
+
+    file = open(f_listin(),'a')
+    file.write(customer_name + ',' + str(customer_phone) + '\n')
 
 def f_option3():
     print('opcion 3')
@@ -69,9 +74,10 @@ def f_option3():
 def f_option4():
     # print('opcion 4')
     file = open('listin.txt','w')
-    file.write('efrain,963752034') # escritura en duro para pruebas
-
+    print('Fichero listin creado :)')
 
 print(f_bucle(f_menu()))
+
+
 
 
