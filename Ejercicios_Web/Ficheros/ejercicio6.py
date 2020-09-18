@@ -69,7 +69,7 @@ def f_option3():
 def f_option4():
     # print('opcion 4')
     file = open('listin.txt','w')
-    file.write('efrain,963752034')
+    file.write('efrain,963752034') # escritura en duro para pruebas
 
 
 print(f_bucle(f_menu()))
