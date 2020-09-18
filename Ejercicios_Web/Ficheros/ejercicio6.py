@@ -67,7 +67,10 @@ def f_option3():
     print('opcion 3')
 
 def f_option4():
-    print('opcion 4')
+    # print('opcion 4')
+    file = open('listin.txt','w')
+    file.write('efrain,963752034')
+
 
 print(f_bucle(f_menu()))
 
