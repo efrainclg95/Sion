@@ -58,7 +58,11 @@ def f_option1():
     except FileNotFoundError:
         print('El fichero no existe :(')
     else:
-        print(file.readlines()) # pendiente
+        customer_list = file.readlines()
+
+        for i in customer_list:
+            print(i.split(','))
+
 
 def f_option2():
     # print('opcion 2')
