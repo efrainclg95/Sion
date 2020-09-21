@@ -58,7 +58,7 @@ def f_option1():
     except FileNotFoundError:
         print('El fichero no existe :(')
     else:
-        print(file.read()) # pendiente
+        print(file.readlines()) # pendiente
 
 def f_option2():
     # print('opcion 2')
