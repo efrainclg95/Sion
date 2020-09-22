@@ -62,12 +62,14 @@ def f_option1():
 
         names_list = []
         telephone_list = []
+
         for j,k in enumerate(customer_list):
             k_split = k.split(',')
             names_list.append(k_split[0])
             telephone_list.append(k_split[1])
 
         dic = dict(zip(names_list,telephone_list))
+        print('El teléfono es: ' + str(dic.get(customer_name)))
 
 def f_option2():
     # print('opcion 2')
