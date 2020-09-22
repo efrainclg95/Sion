@@ -69,7 +69,12 @@ def f_option1():
             telephone_list.append(k_split[1])
 
         dic = dict(zip(names_list,telephone_list))
-        print('El teléfono es: ' + str(dic.get(customer_name)))
+
+        if customer_name in dic:
+            print('Cliente ' + customer_name + ' existe en base')
+            print('Su teléfono es: ' + str(dic.get(customer_name)))
+        else:
+            print('Cliente ' + customer_name + ' no existe en base :(')
 
 def f_option2():
     # print('opcion 2')
