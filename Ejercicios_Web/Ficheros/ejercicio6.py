@@ -66,8 +66,8 @@ def f_option1():
             k_split = k.split(',')
             names_list.append(k_split[0])
             telephone_list.append(k_split[1])
-        print(names_list)
-        print(telephone_list)
+
+        dic = dict(zip(names_list,telephone_list))
 
 def f_option2():
     # print('opcion 2')
