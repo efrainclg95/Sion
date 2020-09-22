@@ -60,9 +60,14 @@ def f_option1():
     else:
         customer_list = file.readlines()
 
-        for i in customer_list:
-            print(i.split(','))
-
+        names_list = []
+        telephone_list = []
+        for j,k in enumerate(customer_list):
+            k_split = k.split(',')
+            names_list.append(k_split[0])
+            telephone_list.append(k_split[1])
+        print(names_list)
+        print(telephone_list)
 
 def f_option2():
     # print('opcion 2')
