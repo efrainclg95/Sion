@@ -68,6 +68,7 @@ def f_option1():
             names_list.append(k_split[0])
             telephone_list.append(k_split[1])
 
+        global dic
         dic = dict(zip(names_list,telephone_list))
 
         if customer_name in dic:
@@ -77,7 +78,6 @@ def f_option1():
             print('Cliente ' + customer_name + ' no existe en base :(')
 
 def f_option2():
-    # print('opcion 2')
     customer_name = str(input('Introduce el nombre del cliente: '))
     customer_phone = int(input('Introduce el teléfono del cliente: '))
 
@@ -85,10 +85,9 @@ def f_option2():
     file.write(customer_name + ',' + str(customer_phone) + '\n')
 
 def f_option3():
-    print('opcion 3')
+    print(dic)
 
 def f_option4():
-    # print('opcion 4')
     file = open('listin.txt','w')
     print('Fichero listin creado :)')
 
