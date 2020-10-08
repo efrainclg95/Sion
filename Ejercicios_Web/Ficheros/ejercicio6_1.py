@@ -48,7 +48,6 @@ def f_bucle(option):
         f_bucle(f_menu())
 
 def f_option1():
-    # print('opt1')
     customer_name = str(input('Introduce el nombre del cliente: '))
 
     try:
