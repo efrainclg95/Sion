@@ -48,7 +48,16 @@ def f_bucle(option):
         f_bucle(f_menu())
 
 def f_option1():
-    print('opt1')
+    # print('opt1')
+    customer_name = str(input('Introduce el nombre del cliente: '))
+
+    try:
+        file = open('listin.txt', 'r')
+    except FileNotFoundError:
+        print('El fichero no existe :(')
+    else:
+        print('Programar else') # pendiente
+
 
 def f_option2():
     print('opt2')
