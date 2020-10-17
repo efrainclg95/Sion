@@ -50,6 +50,7 @@ def f_bucle(option):
     else:
         print('Ingrese una opción válida')
         f_bucle(f_menu())
+    return
 
 def f_option1():
 
@@ -68,6 +69,7 @@ def f_option1():
             for j,k in enumerate(file_list):
                 dic[file_list[0]] = file_list[1]
         print('Su teléfono es: ',dic.get(customer_name))
+    return
 
 def f_option2():
 
@@ -83,7 +85,7 @@ def f_option2():
 
         file = open('listin.txt','a')
         file.write(str(keys) + ',' + str(values) + '\n')
-
+    return
 
 def f_option3():
 
@@ -92,7 +94,8 @@ def f_option3():
 def f_option4():
 
     file = open('listin.txt','w')
-    # file.write('Lista Telefonica\n')
+    return
+
 
 def add(customer_name,telephone_number):
 
