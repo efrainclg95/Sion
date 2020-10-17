@@ -60,7 +60,14 @@ def f_option1():
     except FileNotFoundError:
         print('El fichero no existe :(')
     else:
-        print('Programar else') # pendiente
+        file = open('listin.txt','r')
+        file_list = file.readlines()
+
+        for i in file_list:
+            file_list = i.split(',')
+            for j,k in enumerate(file_list):
+                dic[file_list[0]] = file_list[1]
+        print('Su teléfono es: ',dic.get(customer_name))
 
 def f_option2():
 
@@ -68,14 +75,15 @@ def f_option2():
     telephone_number = int(input('Ingrese número telefónico: '))
 
     add(customer_name,telephone_number)
-    print('Base de Datos: ', add(customer_name, telephone_number))
+    print('Cliente añadido a Base de Datos: ', add(customer_name, telephone_number))
 
+    for keys,values in add(customer_name, telephone_number).items():
 
+        f_option4()
 
-def add(customer_name,telephone_number):
+        file = open('listin.txt','a')
+        file.write(str(keys) + ',' + str(values) + '\n')
 
-    dic[customer_name] = telephone_number
-    return dic
 
 def f_option3():
 
@@ -83,6 +91,12 @@ def f_option3():
 
 def f_option4():
 
-    print('opt4')
+    file = open('listin.txt','w')
+    # file.write('Lista Telefonica\n')
+
+def add(customer_name,telephone_number):
+
+    dic[customer_name] = telephone_number
+    return dic
 
 print(f_bucle(f_menu()))
