@@ -6,7 +6,10 @@ su teléfono deben aparecer separados por comas y cada cliente en una línea dis
 
 # Sol1
 
+dic = {}
+
 def f_menu():
+
     print('\nGestión del listin telefónico')
     print('-----------------------------')
     print('1. Consultar un teléfono')
@@ -19,6 +22,7 @@ def f_menu():
     return v_option
 
 def f_bucle(option):
+
     print('Opción ingresada -->', option)
 
     while option == 0 or option == 1 or option == 2 or option == 3 or option == 4:
@@ -48,6 +52,7 @@ def f_bucle(option):
         f_bucle(f_menu())
 
 def f_option1():
+
     customer_name = str(input('Introduce el nombre del cliente: '))
 
     try:
@@ -57,14 +62,27 @@ def f_option1():
     else:
         print('Programar else') # pendiente
 
-
 def f_option2():
-    print('opt2')
+
+    customer_name = str(input('Ingrese nombre de cliente: '))
+    telephone_number = int(input('Ingrese número telefónico: '))
+
+    add(customer_name,telephone_number)
+    print('Base de Datos: ', add(customer_name, telephone_number))
+
+
+
+def add(customer_name,telephone_number):
+
+    dic[customer_name] = telephone_number
+    return dic
 
 def f_option3():
+
     print('opt3')
 
 def f_option4():
+
     print('opt4')
 
 print(f_bucle(f_menu()))
