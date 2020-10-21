@@ -5,6 +5,7 @@ El listín debe estar guardado en el fichero de texto listin.txt donde el nombre
 su teléfono deben aparecer separados por comas y cada cliente en una línea distinta.'''
 
 # Sol1
+import os
 
 dic = {}
 
@@ -15,7 +16,7 @@ def f_menu():
     print('1. Consultar un teléfono')
     print('2. Añadir un teléfono')
     print('3. Eliminar un teléfono')
-    print('4. Crear el listin')
+    print('4. Crear\Actualizar el listin')
     print('0. Terminar\n')
     global v_option
     v_option = int(input('Ingrese el número de la opción: '))
@@ -56,7 +57,12 @@ def f_bucle(option):
 
 def f_option1():
 
-    print('opt1')
+    try:
+        file = open('listin.txt')
+    except FileNotFoundError:
+        print('El fichero no existe')
+    else:
+        print('Manipula') # pendiente
 
 def f_option2():
 
@@ -70,15 +76,21 @@ def f_option3():
 
 def f_option4():
 
-    if read() != '':
-        file = open('listin.txt','a')
-        for keys, values in dic.items():
-            file.write(str(keys) + ',' + str(values) + '\n')
-    else:
-        file = open('listin.txt', 'w')
+    path = 'C:/Users/Efraín/PycharmProjects/Sion/Ejercicios_Web/Ficheros'
+
+    if 'listin.txt' in os.listdir(path):
+        # print('si')
+        file = open('listin.txt', 'a') # para listin con registros
         for keys, values in dic.items():
             file.write(str(keys) + ',' + str(values) + '\n')
 
+    else:
+        # print('no')
+        file = open('listin.txt', 'w')  # para listin sin registros
+        for keys, values in dic.items():
+            file.write(str(keys) + ',' + str(values) + '\n')
+
+    return
 
 # funciones de apoyo
 
@@ -99,7 +111,8 @@ def base(customer_name,telephone_number):
     return
 
 def read():
-    file = open('listin.txt')
+
+    file = open('listin.txt','r')
     content = file.read()
     return content
 
