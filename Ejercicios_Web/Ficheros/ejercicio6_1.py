@@ -60,7 +60,6 @@ def f_option1():
 
 def f_option2():
 
-    print('opt2')
     add_data()
 
     return
@@ -73,7 +72,8 @@ def f_option4():
 
     file = open('listin.txt','w')
 
-    print(f_option2())
+    for keys,values in dic.items():
+        file.write(str(keys) + ',' + str(values)+ '\n')
 
 # funciones de apoyo
 
@@ -93,5 +93,6 @@ def base(customer_name,telephone_number):
 
     return
 
-
 print(f_bucle(f_menu()))
+
+
