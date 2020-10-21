@@ -52,39 +52,17 @@ def f_bucle(option):
         f_bucle(f_menu())
     return
 
+# funciones principales
+
 def f_option1():
 
-    customer_name = str(input('Introduce el nombre del cliente: '))
-
-    try:
-        file = open('listin.txt', 'r')
-    except FileNotFoundError:
-        print('El fichero no existe :(')
-    else:
-        file = open('listin.txt','r')
-        file_list = file.readlines()
-
-        for i in file_list:
-            file_list = i.split(',')
-            for j,k in enumerate(file_list):
-                dic[file_list[0]] = file_list[1]
-        print('Su teléfono es: ',dic.get(customer_name))
-    return
+    print('opt1')
 
 def f_option2():
 
-    customer_name = str(input('Ingrese nombre de cliente: '))
-    telephone_number = int(input('Ingrese número telefónico: '))
+    print('opt2')
+    add_data()
 
-    add(customer_name,telephone_number)
-    print('Cliente añadido a Base de Datos: ', add(customer_name, telephone_number))
-
-    for keys,values in add(customer_name, telephone_number).items():
-
-        f_option4()
-
-        file = open('listin.txt','a')
-        file.write(str(keys) + ',' + str(values) + '\n')
     return
 
 def f_option3():
@@ -94,12 +72,26 @@ def f_option3():
 def f_option4():
 
     file = open('listin.txt','w')
+
+    print(f_option2())
+
+# funciones de apoyo
+
+def add_data():
+
+    customer_name = str(input('Ingrese nombre de cliente: '))
+    telephone_number = int(input('Ingrese número telefónico: '))
+
+    base(customer_name,telephone_number)
+
     return
 
-
-def add(customer_name,telephone_number):
+def base(customer_name,telephone_number):
 
     dic[customer_name] = telephone_number
-    return dic
+    print(dic)
+
+    return
+
 
 print(f_bucle(f_menu()))
