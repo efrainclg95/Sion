@@ -70,10 +70,15 @@ def f_option3():
 
 def f_option4():
 
-    file = open('listin.txt','w')
+    if read() != '':
+        file = open('listin.txt','a')
+        for keys, values in dic.items():
+            file.write(str(keys) + ',' + str(values) + '\n')
+    else:
+        file = open('listin.txt', 'w')
+        for keys, values in dic.items():
+            file.write(str(keys) + ',' + str(values) + '\n')
 
-    for keys,values in dic.items():
-        file.write(str(keys) + ',' + str(values)+ '\n')
 
 # funciones de apoyo
 
@@ -92,6 +97,11 @@ def base(customer_name,telephone_number):
     print(dic)
 
     return
+
+def read():
+    file = open('listin.txt')
+    content = file.read()
+    return content
 
 print(f_bucle(f_menu()))
 
