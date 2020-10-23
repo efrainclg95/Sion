@@ -76,8 +76,10 @@ def f_option1():
             # print(file_list)
 
             lookup_dic[file_list[0]] = file_list[1]
-            # print(lookup_dic)
+    print(lookup_dic)
 
+        # telephone = lookup_dic.get(customer_name)
+        # print(telephone)
 
 def f_option2():
 
