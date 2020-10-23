@@ -62,7 +62,22 @@ def f_option1():
     except FileNotFoundError:
         print('El fichero no existe')
     else:
-        print('Manipula') # pendiente
+        # print('Manipula') # pendiente
+        customer_name = str(input('Ingrese nombre de cliente: '))
+
+        file = open('listin.txt','r')
+        file_list = file.readlines()
+        # print(file_list)
+
+        lookup_dic = {}
+
+        for j,k in enumerate(file_list):
+            file_list = k.split(',')
+            # print(file_list)
+
+            lookup_dic[file_list[0]] = file_list[1]
+            # print(lookup_dic)
+
 
 def f_option2():
 
