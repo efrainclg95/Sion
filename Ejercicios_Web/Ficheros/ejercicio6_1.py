@@ -62,24 +62,22 @@ def f_option1():
     except FileNotFoundError:
         print('El fichero no existe')
     else:
-        # print('Manipula') # pendiente
         customer_name = str(input('Ingrese nombre de cliente: '))
 
         file = open('listin.txt','r')
         file_list = file.readlines()
-        # print(file_list)
 
         lookup_dic = {}
 
         for j,k in enumerate(file_list):
             file_list = k.split(',')
-            # print(file_list)
 
             lookup_dic[file_list[0]] = file_list[1]
-    print(lookup_dic)
 
-        # telephone = lookup_dic.get(customer_name)
-        # print(telephone)
+    if customer_name in lookup_dic:
+        print('Su teléfono es: ',lookup_dic.get(customer_name))
+    else:
+        print('No existe en base')
 
 def f_option2():
 
