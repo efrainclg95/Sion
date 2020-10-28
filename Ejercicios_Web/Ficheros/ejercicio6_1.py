@@ -8,6 +8,8 @@ su teléfono deben aparecer separados por comas y cada cliente en una línea dis
 import os
 
 dic = {}
+customer_name = ''
+telephone_number = int
 
 def f_menu():
 
@@ -74,33 +76,47 @@ def f_option1():
 
             lookup_dic[file_list[0]] = file_list[1]
 
-    if customer_name in lookup_dic:
+    '''if customer_name in lookup_dic:
         print('Su teléfono es: ',lookup_dic.get(customer_name))
     else:
-        print('No existe en base')
+        print('El cliente ingresado no existe en base')'''
 
 def f_option2():
-
+    print('Ingresa a f_option2')
     add_data()
 
     return
 
 def f_option3():
 
-    print('opt3')
+    customer_name = str(input('Ingrese nombre de cliente a eliminar: '))
+
+    file = open('listin.txt', 'r')
+    file_list = file.readlines()
+
+    lookup_dic = {}
+
+    for j, k in enumerate(file_list):
+        file_list = k.split(',')
+
+        lookup_dic[file_list[0]] = file_list[1]
+
+    lookup_dic.pop(customer_name)
+
+    print(lookup_dic)
 
 def f_option4():
-
+    print('Evalua path')
     path = 'C:/Users/Efraín/PycharmProjects/Sion/Ejercicios_Web/Ficheros'
 
     if 'listin.txt' in os.listdir(path):
-        # print('si')
+        print('si, listin con registros')
         file = open('listin.txt', 'a') # para listin con registros
         for keys, values in dic.items():
             file.write(str(keys) + ',' + str(values) + '\n')
 
     else:
-        # print('no')
+        print('no, listin sin registros')
         file = open('listin.txt', 'w')  # para listin sin registros
         for keys, values in dic.items():
             file.write(str(keys) + ',' + str(values) + '\n')
@@ -110,7 +126,7 @@ def f_option4():
 # funciones de apoyo
 
 def add_data():
-
+    print('Ingresa a add_data')
     customer_name = str(input('Ingrese nombre de cliente: '))
     telephone_number = int(input('Ingrese número telefónico: '))
 
@@ -119,11 +135,18 @@ def add_data():
     return
 
 def base(customer_name,telephone_number):
-
+    print('Ingresa a base')
     dic[customer_name] = telephone_number
     print(dic)
 
     return
+
+def validator(customer_name,telephone_number):
+    print('Ingresa a validator')
+    if customer_name and telephone_number == dic[customer_name]:
+        print('Igualdad de registro')
+    else:
+        print('Ejecuta listin')
 
 def read():
 
