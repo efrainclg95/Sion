@@ -110,7 +110,11 @@ def f_option4():
     path = 'C:/Users/Efraín/PycharmProjects/Sion/Ejercicios_Web/Ficheros'
 
     if 'listin.txt' in os.listdir(path):
-        print('Ya existe listin.txt')
+        print('Ya existe listin.txt, se procede a la actualización')
+        file = open('listin.txt', 'a')
+        for keys, values in dic.items():
+            file.write(str(keys) + ',' + str(values) + '\n')
+        file.close()
 
     else:
         print('Listin no existe, se procede a la creación')
