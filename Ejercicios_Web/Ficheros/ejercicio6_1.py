@@ -76,10 +76,10 @@ def f_option1():
 
             lookup_dic[file_list[0]] = file_list[1]
 
-    '''if customer_name in lookup_dic:
-        print('Su teléfono es: ',lookup_dic.get(customer_name))
-    else:
-        print('El cliente ingresado no existe en base')'''
+        if customer_name in lookup_dic:
+            print('Su teléfono es: ',lookup_dic.get(customer_name))
+        else:
+            print('El cliente ingresado no existe en base')
 
 def f_option2():
     print('Ingresa a f_option2')
@@ -122,10 +122,6 @@ def f_option4():
         for keys, values in dic.items():
             file.write(str(keys) + ',' + str(values) + '\n')
         file.close()
-
-
-
-
 
     '''print('Evalua path')
     path = 'C:/Users/Efraín/PycharmProjects/Sion/Ejercicios_Web/Ficheros'
