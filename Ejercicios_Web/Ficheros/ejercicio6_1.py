@@ -8,8 +8,8 @@ su teléfono deben aparecer separados por comas y cada cliente en una línea dis
 import os
 
 dic = {}
-customer_name = ''
-telephone_number = int
+# customer_name = ''
+# telephone_number = int
 
 def f_menu():
 
@@ -106,14 +106,31 @@ def f_option3():
     print(lookup_dic)
 
 def f_option4():
-    print('Evalua path')
+
+    path = 'C:/Users/Efraín/PycharmProjects/Sion/Ejercicios_Web/Ficheros'
+
+    if 'listin.txt' in os.listdir(path):
+        print('Ya existe listin.txt')
+
+    else:
+        print('Listin no existe, se procede a la creación')
+        file = open('listin.txt', 'w')
+        for keys, values in dic.items():
+            file.write(str(keys) + ',' + str(values) + '\n')
+        file.close()
+
+
+
+
+
+    '''print('Evalua path')
     path = 'C:/Users/Efraín/PycharmProjects/Sion/Ejercicios_Web/Ficheros'
 
     if 'listin.txt' in os.listdir(path):
         print('si, listin con registros')
         file = open('listin.txt', 'a') # para listin con registros
         for keys, values in dic.items():
-            file.write(str(keys) + ',' + str(values) + '\n')
+                file.write(str(keys) + ',' + str(values) + '\n')
 
     else:
         print('no, listin sin registros')
@@ -121,7 +138,7 @@ def f_option4():
         for keys, values in dic.items():
             file.write(str(keys) + ',' + str(values) + '\n')
 
-    return
+    return'''
 
 # funciones de apoyo
 
