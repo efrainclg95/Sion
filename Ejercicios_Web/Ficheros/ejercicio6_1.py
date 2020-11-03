@@ -127,9 +127,16 @@ def f_option4():
         for j, k in enumerate(file_list):
             file_list = k.split(',')
 
-            lookup_dic[file_list[0]] = file_list[1]
+            str_list = [] # nuevo para tratamiento de eliminación \n
 
-        # print(lookup_dic)
+            for i in file_list: # nuevo
+                str_list.append(i.rstrip('\n')) # función elimina \n
+
+
+            # lookup_dic[file_list[0]] = file_list[1]
+            lookup_dic[str_list[0]] = str_list[1]
+
+        print('lookup_dic: ' + str(lookup_dic)) # prueba
         # print(dic)
 
         # Actualiza listin
