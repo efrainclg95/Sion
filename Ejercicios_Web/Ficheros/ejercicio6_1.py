@@ -102,7 +102,7 @@ def f_option3():
         lookup_dic[file_list[0]] = file_list[1]
 
     lookup_dic.pop(customer_name)
-    print(lookup_dic)
+    # print(lookup_dic)
 
     print('Se procede a la actualización del listin')
     file = open('listin.txt', 'w')
@@ -129,11 +129,10 @@ def f_option4():
 
             lookup_dic[file_list[0]] = file_list[1]
 
-        print(lookup_dic)
+        # print(lookup_dic)
+        # print(dic)
 
         # Actualiza listin
-
-        print(dic)
 
         lookup_dic.update(dic)
 
@@ -142,11 +141,6 @@ def f_option4():
             file.write(str(keys) + ',' + str(values) + '\n')
         file.close()
 
-        '''file = open('listin.txt', 'a')
-        for keys, values in dic.items():
-            file.write(str(keys) + ',' + str(values) + '\n')
-        file.close()'''
-
     else:
         print('Listin no existe, se procede a la creación')
         file = open('listin.txt', 'w')
@@ -154,28 +148,13 @@ def f_option4():
             file.write(str(keys) + ',' + str(values) + '\n')
         file.close()
 
-    '''print('Evalua path')
-    path = 'C:/Users/Efraín/PycharmProjects/Sion/Ejercicios_Web/Ficheros'
-
-    if 'listin.txt' in os.listdir(path):
-        print('si, listin con registros')
-        file = open('listin.txt', 'a') # para listin con registros
-        for keys, values in dic.items():
-                file.write(str(keys) + ',' + str(values) + '\n')
-
-    else:
-        print('no, listin sin registros')
-        file = open('listin.txt', 'w')  # para listin sin registros
-        for keys, values in dic.items():
-            file.write(str(keys) + ',' + str(values) + '\n')
-
-    return'''
+    return
 
 # funciones de apoyo
 
 def add_data():
 
-    print('log,ingresa add_data')
+    # print('log,ingresa add_data')
 
     customer_name = str(input('Ingrese nombre de cliente: '))
     telephone_number = int(input('Ingrese número telefónico: '))
@@ -186,24 +165,12 @@ def add_data():
 
 def base(customer_name,telephone_number):
 
-    print('log,ingresa base')
+    # print('log,ingresa base')
 
     dic[customer_name] = telephone_number
     print(dic)
 
     return
-
-'''def validator(customer_name,telephone_number):
-
-    print('Ingresa a validator')
-
-    if customer_name and telephone_number == dic[customer_name]:
-        print('Igualdad de registro')
-        
-    else:
-        print('Ejecuta listin')
-        dic[customer_name] = telephone_number
-        print(dic)'''
 
 def read():
 
