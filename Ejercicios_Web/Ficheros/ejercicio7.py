@@ -19,25 +19,18 @@ def fopen():
     general_list = f.readlines()
     return general_list
 
-def clean(valor):
+def clean(valor): # elimina la ','
 
     valor = valor.replace(',','')
-    # return float(valor)
     return valor
 
-def operation_clean(lista_geneal):
+def operation_clean(lista_general):
 
-    # print(lista_geneal)
-
-    for i in lista_geneal:
+    for i in lista_general:
         i = clean(i)
+        i = i.strip() # elimina espacios, salto de línea y tabulaciones
         print(i)
-
-
+    return
 
 print(operation_clean(fopen()))
-
-
-
-'''for i in file_list:  # nuevo
-    str_list.append(i.rstrip('\n'))  # función elimina \n'''
+# print(fopen())
