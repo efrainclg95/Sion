@@ -26,11 +26,17 @@ def clean(valor): # elimina la ','
 
 def operation_clean(lista_general):
 
+    list_i = []
+
+
     for i in lista_general:
         i = clean(i)
         i = i.strip() # elimina espacios, salto de línea y tabulaciones
-        print(i)
-    return
+
+        list_i.append(i)
+
+    return list_i
 
 print(operation_clean(fopen()))
 # print(fopen())
+
