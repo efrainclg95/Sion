@@ -28,7 +28,6 @@ def operation_clean(lista_general):
 
     list_i = []
 
-
     for i in lista_general:
         i = clean(i)
         i = i.strip() # elimina espacios, salto de línea y tabulaciones
