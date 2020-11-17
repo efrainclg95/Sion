@@ -12,6 +12,9 @@ Construir una función reciba el fichero de cotizaciones y devuelva un diccionar
 Construir una función que reciba el diccionario devuelto por la función anterior y
 cree un fichero en formato csv con el mínimo, el máximo y la media de dada columna.'''
 
+minimo = {}
+maximo = {}
+media = {}
 
 def fopen():
 
@@ -40,11 +43,27 @@ def structured(lista_limpia):
 
     for i in lista_limpia:
         list_s = i.split(';')
-        print(list_s)
-    return
+        # print(list_s) # se crea lista por cada registro
+        return list_s # keys para los diccionarios
+
+def operations(keys):
+
+    for j,k in enumerate(keys):
+        if j >= 1:
+            minimo[k] = 'valor'
+
+    print(minimo)
+
+
+
+    # for i in enumerate(keys):
+        # print(i)
+
+
+
 
 
 # print(operation_clean(fopen()))
-print(structured(operation_clean(fopen())))
-# print(fopen())
+# print(structured(operation_clean(fopen())))
+print(operations(structured(operation_clean(fopen()))))
 
