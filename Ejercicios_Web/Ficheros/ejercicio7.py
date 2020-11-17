@@ -43,27 +43,21 @@ def structured(lista_limpia):
 
     for i in lista_limpia:
         list_s = i.split(';')
-        # print(list_s) # se crea lista por cada registro
-        return list_s # keys para los diccionarios
+        print(list_s) # se crea lista por cada registro
+        # return list_s # keys para los diccionarios o cabecera
 
-def operations(keys):
+        for j,k in enumerate(list_s):
+            print(j,k)
 
+'''def operations(keys):
+    
     for j,k in enumerate(keys):
         if j >= 1:
-            minimo[k] = 'valor'
+            minimo[k] = 'valor' 
 
-    print(minimo)
-
-
-
-    # for i in enumerate(keys):
-        # print(i)
-
-
-
-
+    print(minimo)'''
 
 # print(operation_clean(fopen()))
-# print(structured(operation_clean(fopen())))
-print(operations(structured(operation_clean(fopen()))))
+print(structured(operation_clean(fopen())))
+# print(operations(structured(operation_clean(fopen()))))
 
