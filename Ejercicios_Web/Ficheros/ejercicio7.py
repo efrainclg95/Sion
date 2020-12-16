@@ -43,11 +43,13 @@ def structured(lista_limpia):
 
     for i in lista_limpia:
         list_s = i.split(';')
-        print(list_s) # se crea lista por cada registro
+        # print(list_s) # se crea lista por cada registro
         # return list_s # keys para los diccionarios o cabecera
 
         for j,k in enumerate(list_s):
-            print(j,k)
+            if j == 1:
+                print(j,k)
+
 
 '''def operations(keys):
     
