@@ -41,14 +41,16 @@ def operation_clean(lista_general):
 
 def structured(lista_limpia):
 
-    for i in lista_limpia:
+    '''for i in lista_limpia:
         list_s = i.split(';')
-        # print(list_s) # se crea lista por cada registro
-        # return list_s # keys para los diccionarios o cabecera
+        print(list_s) # se crea lista por cada registro
+        # return list_s # keys para los diccionarios o cabecera'''
 
-        for j,k in enumerate(list_s):
-            if j == 1:
-                print(j,k)
+    for j, k in enumerate(lista_limpia):
+        list_s = k.split(';')
+
+        if j  > 0: # se elimina la cabecera principal
+            print(list_s) # imprime listas sin cabeceras
 
 
 '''def operations(keys):
