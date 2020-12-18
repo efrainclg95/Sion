@@ -50,7 +50,13 @@ def structured(lista_limpia):
         list_s = k.split(';')
 
         if j  > 0: # se elimina la cabecera principal
-            print(list_s) # imprime listas sin cabeceras
+            # print(list_s) # imprime listas sin cabeceras
+
+            list_s.pop(0) # elimina elemento 0 de lista
+            print(list_s)
+
+            # minimo = {'final': min(list_s[1])}
+            # print(minimo)
 
 
 '''def operations(keys):
