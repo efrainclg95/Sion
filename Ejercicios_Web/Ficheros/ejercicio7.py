@@ -15,6 +15,12 @@ cree un fichero en formato csv con el mínimo, el máximo y la media de dada col
 minimo = {}
 maximo = {}
 media = {}
+lista_final = []
+lista_max = []
+lista_min = []
+lista_vol = []
+lista_efectivo = []
+
 
 def fopen():
 
@@ -60,8 +66,27 @@ def structured(lista_limpia):
             # print(list_t) # lista con valores enteros, no existe str
 
             for a, b in enumerate(list_t):
+                # print(a, b)
+                if a == 0:
+                    lista_final.append(b) # lista campo final
+                elif a == 1:
+                    lista_max.append(b)  # lista campo maximo
+                elif a == 2:
+                    lista_min.append(b)  # lista campo minimo
+                elif a == 3:
+                    lista_vol.append(b)  # lista campo volumen
+                elif a == 4:
+                    lista_efectivo.append(b)  # lista campo efectivo
 
-                print(a, b)
+    print(lista_final)
+    print(lista_max)
+    print(lista_min)
+    print(lista_vol)
+    print(lista_efectivo)
+
+
+
+
 
 
     return
