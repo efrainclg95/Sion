@@ -22,6 +22,8 @@ dic_min = {}
 dic_max = {}
 dic_media = {}
 
+import statistics as stats
+
 def fopen():
 
     f = open('cotizacion.csv','r')
@@ -83,6 +85,20 @@ def structured(lista_limpia):
     # print(lista_min)
     # print(lista_vol)
     # print(lista_efectivo)
+
+    dic_min = {'Nombre': 'Mínimo', 'Final': min(lista_final), 'Máximo': min(lista_final), 'Mínimo': min(lista_min), 'Volumen': min(lista_vol), 'Efectivo': min(lista_efectivo)}
+    dic_max = {'Nombre': 'Máximo', 'Final': max(lista_final), 'Máximo': max(lista_final), 'Mínimo': max(lista_min), 'Volumen': max(lista_vol), 'Efectivo': max(lista_efectivo)}
+    dic_media = {'Nombre': 'Media', 'Final': stats.mean(lista_final), 'Máximo': stats.mean(lista_final), 'Mínimo': stats.mean(lista_min), 'Volumen': stats.mean(lista_vol), 'Efectivo': stats.mean(lista_efectivo)}
+
+
+
+
+
+    print(dic_min)
+    print(dic_max)
+    print(dic_media)
+
+
 
 print(structured(operation_clean(fopen())))
 
