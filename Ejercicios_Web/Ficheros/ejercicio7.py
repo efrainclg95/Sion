@@ -92,8 +92,6 @@ def structured(lista_limpia):
     # print(dic_max)
     # print(dic_media)
 
-    # f = open('informe_cotizacion.csv','w')
-
     l_str1 = []
     l_str2 = []
     l_str3 = []
@@ -102,28 +100,35 @@ def structured(lista_limpia):
     for keys, values in dic_min.items():
         l_str1.append(keys)
         str1 = ";".join(l_str1) # convierte lista a cadena poniendo un ";" como separador
-    print(str1)
-
+    # print(str1)
 
     for keys, values in dic_min.items():
         # print(keys, values)
         l_str2.append(str(values))
         str2 = ";".join(l_str2)  # convierte lista a cadena poniendo un ";" como separador
-    print(str2)
+    # print(str2)
 
     for keys, values in dic_max.items():
         # print(keys, values)
         l_str3.append(str(values))
         str3 = ";".join(l_str3)  # convierte lista a cadena poniendo un ";" como separador
-    print(str3)
+    # print(str3)
 
     for keys, values in dic_media.items():
         # print(keys, values)
         l_str4.append(str(values))
         str4 = ";".join(l_str4)  # convierte lista a cadena poniendo un ";" como separador
-    print(str4)
+    # print(str4)
 
+    f = open('informe_cotizacion.csv','w')
+    f.write(str1 + '\n')
 
+    f = open('informe_cotizacion.csv','a')
+    f.write(str2 + '\n')
+    f.write(str3 + '\n')
+    f.write(str4 + '\n')
+
+    f.close()
 
 print(structured(operation_clean(fopen())))
 
