@@ -65,8 +65,6 @@ def structured(lista_limpia):
                 else:
                     list_t.append(int(k.replace('.',''))) # reemplaza el . por ''
 
-            # print(list_t) # lista con valores enteros, no existe str
-
             for a, b in enumerate(list_t):
                 # print(a, b)
                 if a == 0:
@@ -90,15 +88,12 @@ def structured(lista_limpia):
     dic_max = {'Nombre': 'Máximo', 'Final': max(lista_final), 'Máximo': max(lista_final), 'Mínimo': max(lista_min), 'Volumen': max(lista_vol), 'Efectivo': max(lista_efectivo)}
     dic_media = {'Nombre': 'Media', 'Final': stats.mean(lista_final), 'Máximo': stats.mean(lista_final), 'Mínimo': stats.mean(lista_min), 'Volumen': stats.mean(lista_vol), 'Efectivo': stats.mean(lista_efectivo)}
 
+    # print(dic_min)
+    # print(dic_max)
+    # print(dic_media)
 
-
-
-
-    print(dic_min)
-    print(dic_max)
-    print(dic_media)
-
-
+    f = open('informe_cotizacion.csv','w')
+    f.write('prueba')
 
 print(structured(operation_clean(fopen())))
 
