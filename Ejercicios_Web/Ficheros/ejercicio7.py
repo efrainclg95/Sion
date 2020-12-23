@@ -84,16 +84,46 @@ def structured(lista_limpia):
     # print(lista_vol)
     # print(lista_efectivo)
 
-    dic_min = {'Nombre': 'Mínimo', 'Final': min(lista_final), 'Máximo': min(lista_final), 'Mínimo': min(lista_min), 'Volumen': min(lista_vol), 'Efectivo': min(lista_efectivo)}
-    dic_max = {'Nombre': 'Máximo', 'Final': max(lista_final), 'Máximo': max(lista_final), 'Mínimo': max(lista_min), 'Volumen': max(lista_vol), 'Efectivo': max(lista_efectivo)}
-    dic_media = {'Nombre': 'Media', 'Final': stats.mean(lista_final), 'Máximo': stats.mean(lista_final), 'Mínimo': stats.mean(lista_min), 'Volumen': stats.mean(lista_vol), 'Efectivo': stats.mean(lista_efectivo)}
+    dic_min = {'Nombre': 'Mínimo', 'Final': min(lista_final), 'Máximo': min(lista_max), 'Mínimo': min(lista_min), 'Volumen': min(lista_vol), 'Efectivo': min(lista_efectivo)}
+    dic_max = {'Nombre': 'Máximo', 'Final': max(lista_final), 'Máximo': max(lista_max), 'Mínimo': max(lista_min), 'Volumen': max(lista_vol), 'Efectivo': max(lista_efectivo)}
+    dic_media = {'Nombre': 'Media', 'Final': stats.mean(lista_final), 'Máximo': stats.mean(lista_max), 'Mínimo': stats.mean(lista_min), 'Volumen': stats.mean(lista_vol), 'Efectivo': stats.mean(lista_efectivo)}
 
     # print(dic_min)
     # print(dic_max)
     # print(dic_media)
 
-    f = open('informe_cotizacion.csv','w')
-    f.write('prueba')
+    # f = open('informe_cotizacion.csv','w')
+
+    l_str1 = []
+    l_str2 = []
+    l_str3 = []
+    l_str4 = []
+
+    for keys, values in dic_min.items():
+        l_str1.append(keys)
+        str1 = ";".join(l_str1) # convierte lista a cadena poniendo un ";" como separador
+    print(str1)
+
+
+    for keys, values in dic_min.items():
+        # print(keys, values)
+        l_str2.append(str(values))
+        str2 = ";".join(l_str2)  # convierte lista a cadena poniendo un ";" como separador
+    print(str2)
+
+    for keys, values in dic_max.items():
+        # print(keys, values)
+        l_str3.append(str(values))
+        str3 = ";".join(l_str3)  # convierte lista a cadena poniendo un ";" como separador
+    print(str3)
+
+    for keys, values in dic_media.items():
+        # print(keys, values)
+        l_str4.append(str(values))
+        str4 = ";".join(l_str4)  # convierte lista a cadena poniendo un ";" como separador
+    print(str4)
+
+
 
 print(structured(operation_clean(fopen())))
 
