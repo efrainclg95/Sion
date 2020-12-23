@@ -130,6 +130,8 @@ def structured(lista_limpia):
 
     f.close()
 
+    return
+
 print(structured(operation_clean(fopen())))
 
 # print(armed(lista_final))
