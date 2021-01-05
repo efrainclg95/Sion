@@ -16,6 +16,26 @@ registro = str('calificaciones_limpio.csv')
 def lista_dic(registro):
 
     f = open(registro,'r')
-    return f.read()
+    f = f.readlines()
+
+    # Proceso de limpieza
+
+    for i in f:
+        i = i.strip()  # elimina espacios, salto de línea y tabulaciones
+        i = i.replace('\xad','') # limpia el caracter \xad (-)
+
+        print(i)
+
+    # return lista_c1
+    # return i
+
 
 print(lista_dic(registro))
+
+
+
+
+'''def clean(valor): # elimina la ','
+
+    valor = valor.replace(',','')
+    return valor'''
