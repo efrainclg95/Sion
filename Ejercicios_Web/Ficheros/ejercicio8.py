@@ -24,6 +24,7 @@ def lista_dic(registro):
         i = i.strip()  # elimina espacios, salto de línea y tabulaciones
         i = i.replace('\xad','') # limpia el caracter \xad (-)
 
+
         print(i)
 
     # return lista_c1
