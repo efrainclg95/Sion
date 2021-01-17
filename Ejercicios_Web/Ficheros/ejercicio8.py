@@ -13,6 +13,8 @@ Para aprobar el curso, la asistencia tiene que ser mayor o igual que el 75%, la 
 
 registro = str('calificaciones_limpio.csv')
 
+# lista_0 = []
+
 def lista_dic(registro):
 
     f = open(registro,'r')
@@ -24,9 +26,9 @@ def lista_dic(registro):
         i = i.strip()  # elimina espacios, salto de línea y tabulaciones
         i = i.replace('\xad','') # limpia el caracter \xad (-)
 
+        i = i.split(',') # lista todos los registros
+
         print(i)
-
-
 
 print(lista_dic(registro))
 
