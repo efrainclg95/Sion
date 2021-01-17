@@ -26,16 +26,7 @@ def lista_dic(registro):
 
         print(i)
 
-    # return lista_c1
-    # return i
 
 
 print(lista_dic(registro))
 
-
-
-
-'''def clean(valor): # elimina la ','
-
-    valor = valor.replace(',','')
-    return valor'''
