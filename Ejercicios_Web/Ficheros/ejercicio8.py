@@ -22,13 +22,34 @@ def lista_dic(registro):
 
     # Proceso de limpieza
 
-    for i in f:
+    for h,i in enumerate(f):
         i = i.strip()  # elimina espacios, salto de línea y tabulaciones
         i = i.replace('\xad','') # limpia el caracter \xad (-)
 
-        i = i.split(',') # lista todos los registros
+        i = i.split(',') # lista todos los registros con orden correspondiente "h"
+        print(h,i)
 
-        print(i)
+    '''for i in f:
+        i = i.strip()  # elimina espacios, salto de línea y tabulaciones
+        i = i.replace('\xad', '')  # limpia el caracter \xad (-)
+
+        i = i.split(',')  # lista todos los registros
+        print(i)'''
+
+
+
+
+
+
+
+
+
+
+
+
+'''>> > li = ['miCoche1', 'miCoche2', 'miCoche3', 'miCoche4', 'miCoche5']
+>> > dict(zip(li, range(len(li))))
+{'miCoche1': 0, 'miCoche2': 1, 'miCoche3': 2, 'miCoche4': 3, 'miCoche5': 4}'''
 
 print(lista_dic(registro))
 
