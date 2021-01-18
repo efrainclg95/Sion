@@ -22,19 +22,16 @@ def lista_dic(registro):
 
     # Proceso de limpieza
 
-    for h,i in enumerate(f):
-        i = i.strip()  # elimina espacios, salto de línea y tabulaciones
-        i = i.replace('\xad','') # limpia el caracter \xad (-)
+    for j,k in enumerate(f):
+        k = k.strip()  # elimina espacios, salto de línea y tabulaciones
+        k = k.replace('\xad','') # limpia el caracter \xad (-)
 
-        i = i.split(',') # lista todos los registros con orden correspondiente "h"
-        print(h,i)
+        k = k.split(',') # lista todos los registros con orden correspondiente "h"
+        # print(j,k)
 
-    '''for i in f:
-        i = i.strip()  # elimina espacios, salto de línea y tabulaciones
-        i = i.replace('\xad', '')  # limpia el caracter \xad (-)
+        if j == 0:
+            print(k)
 
-        i = i.split(',')  # lista todos los registros
-        print(i)'''
 
 
 
