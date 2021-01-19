@@ -12,8 +12,7 @@ Una función que reciba una lista de diccionarios como la que devuelve la funci�
 Para aprobar el curso, la asistencia tiene que ser mayor o igual que el 75%, la nota de los exámenes parciales y de prácticas mayor o igual que 4 y la nota final mayor o igual que 5.'''
 
 registro = str('calificaciones_limpio.csv')
-
-# lista_0 = []
+dic_f1 = {}
 
 def lista_dic(registro):
 
@@ -30,7 +29,20 @@ def lista_dic(registro):
         # print(j,k)
 
         if j == 0:
-            print(k)
+            lista_key = k
+            # print(lista_key)
+
+        elif j >= 1:
+            lista_values = k
+            # print(lista_values)
+
+            # dic_f1 = dict(zip(lista_key,lista_values))
+            # print(dic_f1)
+
+            for lv in lista_values:
+                print(lv)
+
+
 
 
 
