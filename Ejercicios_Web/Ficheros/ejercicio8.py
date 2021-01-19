@@ -12,7 +12,7 @@ Una función que reciba una lista de diccionarios como la que devuelve la funci�
 Para aprobar el curso, la asistencia tiene que ser mayor o igual que el 75%, la nota de los exámenes parciales y de prácticas mayor o igual que 4 y la nota final mayor o igual que 5.'''
 
 registro = str('calificaciones_limpio.csv')
-dic_f1 = {}
+lista_f1 = []
 
 def lista_dic(registro):
 
@@ -29,36 +29,18 @@ def lista_dic(registro):
         # print(j,k)
 
         if j == 0:
-            lista_key = k
+            lista_key = k # lista para keys
             # print(lista_key)
 
         elif j >= 1:
-            lista_values = k
+            lista_values = k # lista para valores
             # print(lista_values)
 
-            # dic_f1 = dict(zip(lista_key,lista_values))
+            dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
             # print(dic_f1)
+            lista_f1.append(dic_f1) # se obtiene lista con diccionarios
 
-            for lv in lista_values:
-                print(lv)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''>> > li = ['miCoche1', 'miCoche2', 'miCoche3', 'miCoche4', 'miCoche5']
->> > dict(zip(li, range(len(li))))
-{'miCoche1': 0, 'miCoche2': 1, 'miCoche3': 2, 'miCoche4': 3, 'miCoche5': 4}'''
+    return (lista_f1)
 
 print(lista_dic(registro))
 
