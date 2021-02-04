@@ -34,13 +34,17 @@ def lista_dic(registro):
 
         elif j >= 1:
             lista_values = k # lista para valores
-            # print(lista_values)
+            print(lista_values)
 
-            dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
+
+            '''dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
             # print(dic_f1)
             lista_f1.append(dic_f1) # se obtiene lista con diccionarios
 
-    return (lista_f1)
+    return (lista_f1)'''
+
+
+
 
 print(lista_dic(registro))
 
