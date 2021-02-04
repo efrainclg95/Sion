@@ -34,7 +34,12 @@ def lista_dic(registro):
 
         elif j >= 1:
             lista_values = k # lista para valores
-            print(lista_values)
+            # print(lista_values[3:9])
+
+            for a,b in enumerate(lista_values): # inicia tratamiento para el ingreso de punto decimal y conversion a float, valores 3 al 9 de la lista
+                # print(a,b)
+                if a >= 3 and a <= 9:
+                    print(a,b)
 
 
             '''dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
