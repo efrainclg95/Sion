@@ -14,6 +14,20 @@ Para aprobar el curso, la asistencia tiene que ser mayor o igual que el 75%, la 
 registro = str('calificaciones_limpio.csv')
 lista_f1 = []
 
+def tratamiento(lista1):
+
+    lista2 = []
+
+    for j in lista1:
+        v_str_j = str(j)
+        v_len_j = len(v_str_j)
+
+        if v_len_j >= 1:
+            v_ntrat = v_str_j[0] + '.' + v_str_j[1:9]
+            lista2.append(float(v_ntrat))
+
+    return lista2
+
 def lista_dic(registro):
 
     f = open(registro,'r')
@@ -36,10 +50,16 @@ def lista_dic(registro):
             lista_values = k # lista para valores
             # print(lista_values[3:9])
 
-            for a,b in enumerate(lista_values): # inicia tratamiento para el ingreso de punto decimal y conversion a float, valores 3 al 9 de la lista
+            # print(tratamiento(lista_values[3:9]))
+            print(lista_values)
+
+
+
+
+            '''for a,b in enumerate(lista_values): # inicia tratamiento para el ingreso de punto decimal y conversion a float, valores 3 al 9 de la lista
                 # print(a,b)
                 if a >= 3 and a <= 9:
-                    print(a,b)
+                    print(a,b)'''
 
 
             '''dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
@@ -52,4 +72,6 @@ def lista_dic(registro):
 
 
 print(lista_dic(registro))
+
+# print(tratamiento())
 
