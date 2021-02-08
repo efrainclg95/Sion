@@ -19,6 +19,10 @@ def tratamiento(lista1):
     lista2 = []
 
     for j in lista1:
+
+        if j == '': # convierte los espacios vacios en 0
+            j = 0
+
         v_str_j = str(j)
         v_len_j = len(v_str_j)
 
@@ -50,8 +54,8 @@ def lista_dic(registro):
             lista_values = k # lista para valores
             # print(lista_values[3:9])
 
-            # print(tratamiento(lista_values[3:9]))
-            print(lista_values)
+            print(tratamiento(lista_values[3:9]))
+            # print(lista_values)
 
 
 
