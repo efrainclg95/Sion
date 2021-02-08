@@ -56,11 +56,6 @@ def lista_dic(registro):
 
             lista_values[3:9] = tratamiento(lista_values[3:9]) # reemplaza los valores de la lista[3:9] por los valores tratados en tratamiento(lista_values[3:9]
 
-            '''for a,b in enumerate(lista_values): # inicia tratamiento para el ingreso de punto decimal y conversion a float, valores 3 al 9 de la lista
-                # print(a,b)
-                if a >= 3 and a <= 9:
-                    print(a,b)'''
-
             dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
             lista_f1.append(dic_f1) # se obtiene lista con diccionarios
 
