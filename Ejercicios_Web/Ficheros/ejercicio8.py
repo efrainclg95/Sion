@@ -28,9 +28,15 @@ def tratamiento(lista1):
 
         if v_len_j >= 1:
             v_ntrat = v_str_j[0] + '.' + v_str_j[1:9]
-            lista2.append(float(v_ntrat))
+            lista2.append(float(v_ntrat)) # tipo de dato de los valores numéricos de la lista
 
     return lista2
+
+def conversion_porcentaje(lista_valor):
+
+    v_int = int(float(lista_valor) * 100)
+
+    return (str(v_int) + '%')
 
 def lista_dic(registro):
 
@@ -56,10 +62,13 @@ def lista_dic(registro):
 
             lista_values[3:9] = tratamiento(lista_values[3:9]) # reemplaza los valores de la lista[3:9] por los valores tratados en tratamiento(lista_values[3:9]
 
-            dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
+            print(lista_values)
+
+            '''dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
             lista_f1.append(dic_f1) # se obtiene lista con diccionarios
 
-    return (lista_f1)
+    return (lista_f1)'''
 
-print(lista_dic(registro))
+# print(lista_dic(registro))
 
+print(conversion_porcentaje(0.35))
