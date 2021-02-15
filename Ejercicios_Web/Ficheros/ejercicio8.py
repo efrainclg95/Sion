@@ -38,6 +38,12 @@ def conversion_porcentaje(lista_valor):
 
     return (str(v_int) + '%')
 
+def lista_final1(lista_mayor):
+
+    lista_mayor = max(lista_mayor[3],lista_mayor[5]) # calcula el valor mayor de dos valores indice 3 y 5 de la lista general
+
+    return lista_mayor
+
 def lista_dic(registro):
 
     f = open(registro,'r')
@@ -54,6 +60,8 @@ def lista_dic(registro):
 
         if j == 0:
             lista_key = k # lista para keys
+            lista_key.append('Final1')
+            lista_key.append('Final2')
             # print(lista_key)
 
         elif j >= 1:
@@ -64,12 +72,18 @@ def lista_dic(registro):
 
             lista_values[2] = conversion_porcentaje(lista_values[2]) # reemplaza los valores de la lista[2] por un valor en cadena agregando el %
 
-            print(lista_values)
+            lista_values.append(lista_final1(lista_values)) # se agrega a la lista el valor mayor de la comparación que ejecuta la función lista_final1
 
-            '''dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
+            # print(lista_values)
+
+            dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
             lista_f1.append(dic_f1) # se obtiene lista con diccionarios
 
-    return (lista_f1)'''
+    return (lista_f1)
 
 print(lista_dic(registro))
+
+
 # print(conversion_porcentaje(0.35 ))
+# print(lista_max([4,5,6,5,2,4,8,9,3]))
+
