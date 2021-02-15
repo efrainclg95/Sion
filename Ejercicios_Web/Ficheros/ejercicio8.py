@@ -50,6 +50,12 @@ def lista_final2(lista_mayor):
 
     return lista_mayor
 
+def lista_finalprac(lista_mayor):
+
+    lista_mayor = max(lista_mayor[7],lista_mayor[8]) # calcula el valor mayor de dos valores indice 7 y 8 de la lista general
+
+    return lista_mayor
+
 def lista_dic(registro):
 
     f = open(registro,'r')
@@ -68,6 +74,7 @@ def lista_dic(registro):
             lista_key = k # lista para keys
             lista_key.append('Final1')
             lista_key.append('Final2')
+            lista_key.append('FinalPracticas ')
             # print(lista_key)
 
         elif j >= 1:
@@ -81,6 +88,8 @@ def lista_dic(registro):
             lista_values.append(lista_final1(lista_values)) # se agrega a la lista el valor mayor de la comparación que ejecuta la función lista_final1
 
             lista_values.append(lista_final2(lista_values))  # se agrega a la lista el valor mayor de la comparación que ejecuta la función lista_final2
+
+            lista_values.append(lista_finalprac(lista_values))  # se agrega a la lista el valor mayor de la comparación que ejecuta la función lista_finalprac
 
             # print(lista_values)
 
