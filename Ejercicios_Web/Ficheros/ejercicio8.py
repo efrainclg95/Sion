@@ -62,7 +62,7 @@ def lista_dic(registro):
 
             lista_values[3:9] = tratamiento(lista_values[3:9]) # reemplaza los valores de la lista[3:9] por los valores tratados en tratamiento(lista_values[3:9]
 
-            lista_values[2] = conversion_porcentaje(lista_values[2])
+            lista_values[2] = conversion_porcentaje(lista_values[2]) # reemplaza los valores de la lista[2] por un valor en cadena agregando el %
 
             print(lista_values)
 
