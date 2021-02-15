@@ -56,6 +56,12 @@ def lista_finalprac(lista_mayor):
 
     return lista_mayor
 
+def nota_fin(lista_nfin):
+
+    lista_nfin = lista_nfin[9] * 0.3 + lista_nfin[10] * 0.3 + lista_nfin[11] * 0.4 # calcula la notal final
+
+    return lista_nfin
+
 def lista_dic(registro):
 
     f = open(registro,'r')
@@ -75,6 +81,7 @@ def lista_dic(registro):
             lista_key.append('Final1')
             lista_key.append('Final2')
             lista_key.append('FinalPracticas ')
+            lista_key.append('NotaFinal')
             # print(lista_key)
 
         elif j >= 1:
@@ -90,6 +97,8 @@ def lista_dic(registro):
             lista_values.append(lista_final2(lista_values))  # se agrega a la lista el valor mayor de la comparación que ejecuta la función lista_final2
 
             lista_values.append(lista_finalprac(lista_values))  # se agrega a la lista el valor mayor de la comparación que ejecuta la función lista_finalprac
+
+            lista_values.append(nota_fin(lista_values)) # se agrega la nota final luego de procesar la función nota_fin
 
             # print(lista_values)
 
