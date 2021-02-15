@@ -44,6 +44,12 @@ def lista_final1(lista_mayor):
 
     return lista_mayor
 
+def lista_final2(lista_mayor):
+
+    lista_mayor = max(lista_mayor[4],lista_mayor[6]) # calcula el valor mayor de dos valores indice 4 y 6 de la lista general
+
+    return lista_mayor
+
 def lista_dic(registro):
 
     f = open(registro,'r')
@@ -73,6 +79,8 @@ def lista_dic(registro):
             lista_values[2] = conversion_porcentaje(lista_values[2]) # reemplaza los valores de la lista[2] por un valor en cadena agregando el %
 
             lista_values.append(lista_final1(lista_values)) # se agrega a la lista el valor mayor de la comparación que ejecuta la función lista_final1
+
+            lista_values.append(lista_final2(lista_values))  # se agrega a la lista el valor mayor de la comparación que ejecuta la función lista_final2
 
             # print(lista_values)
 
