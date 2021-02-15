@@ -62,6 +62,8 @@ def lista_dic(registro):
 
             lista_values[3:9] = tratamiento(lista_values[3:9]) # reemplaza los valores de la lista[3:9] por los valores tratados en tratamiento(lista_values[3:9]
 
+            lista_values[2] = conversion_porcentaje(lista_values[2])
+
             print(lista_values)
 
             '''dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
@@ -69,6 +71,5 @@ def lista_dic(registro):
 
     return (lista_f1)'''
 
-# print(lista_dic(registro))
-
-print(conversion_porcentaje(0.35))
+print(lista_dic(registro))
+# print(conversion_porcentaje(0.35 ))
