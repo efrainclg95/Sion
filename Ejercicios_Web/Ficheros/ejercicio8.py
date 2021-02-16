@@ -62,6 +62,13 @@ def nota_fin(lista_nfin):
 
     return lista_nfin
 
+def aprobados_desaprobado(lista_general):
+
+    if lista_general[2] >= '75%':
+        print(lista_general)
+    # else:
+        # print(lista_general)
+
 def lista_dic(registro):
 
     f = open(registro,'r')
@@ -100,16 +107,13 @@ def lista_dic(registro):
 
             lista_values.append(nota_fin(lista_values)) # se agrega la nota final luego de procesar la función nota_fin
 
+            aprobados_desaprobado(lista_values)
+
             # print(lista_values)
 
-            dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
+            '''dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
             lista_f1.append(dic_f1) # se obtiene lista con diccionarios
 
-    return (lista_f1)
+    return (lista_f1)'''
 
 print(lista_dic(registro))
-
-
-# print(conversion_porcentaje(0.35 ))
-# print(lista_max([4,5,6,5,2,4,8,9,3]))
-
