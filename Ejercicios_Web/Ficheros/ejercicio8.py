@@ -14,6 +14,10 @@ Para aprobar el curso, la asistencia tiene que ser mayor o igual que el 75%, la 
 registro = str('calificaciones_limpio.csv')
 lista_f1 = []
 
+
+lista_aprobados = []
+lista_suspensos = []
+
 def tratamiento(lista1):
 
     lista2 = []
@@ -64,10 +68,18 @@ def nota_fin(lista_nfin):
 
 def aprobados_desaprobado(lista_general):
 
-    if lista_general[2] >= '75%':
-        print(lista_general)
-    # else:
-        # print(lista_general)
+    lista_general[2] = int(lista_general[2].strip('%')) # eliminar el % y convierte el valor a entero
+    # lista_aprobados = []
+    # lista_suspensos = []
+
+    if lista_general[2] >= 75 and lista_general[9] >= 4 and lista_general[10] >= 4 and lista_general[11] >= 4 and lista_general[12] >= 5:
+        lista_aprobados.append(lista_general[0:2])
+        # print('Aprobado',lista_general[0:2])
+    else:
+        lista_suspensos.append(lista_general[0:2])
+        # print('Desaprobado',lista_general[0:2])
+
+    return lista_aprobados,lista_suspensos
 
 def lista_dic(registro):
 
@@ -111,9 +123,18 @@ def lista_dic(registro):
 
             # print(lista_values)
 
-            '''dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
+            dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
             lista_f1.append(dic_f1) # se obtiene lista con diccionarios
 
-    return (lista_f1)'''
+
+    return (lista_f1)
 
 print(lista_dic(registro))
+
+print('Aprobados', lista_aprobados)
+print('Suspensos',lista_suspensos)
+
+
+
+
+
