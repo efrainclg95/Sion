@@ -79,7 +79,7 @@ def aprobados_desaprobado(lista_general):
         lista_suspensos.append(lista_general[0:2])
         # print('Desaprobado',lista_general[0:2])
 
-    return lista_aprobados,lista_suspensos
+    return
 
 def lista_dic(registro):
 
@@ -126,13 +126,13 @@ def lista_dic(registro):
             dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
             lista_f1.append(dic_f1) # se obtiene lista con diccionarios
 
-
     return (lista_f1)
 
 print(lista_dic(registro))
 
 print('Aprobados', lista_aprobados)
-print('Suspensos',lista_suspensos)
+print('Suspensos', lista_suspensos)
+
 
 
 
