@@ -65,21 +65,27 @@ def nota_fin(lista_nfin):
 
     return lista_nfin
 
-'''def aprobados_desaprobado(lista_general):
-
-    lista_general[2] = int(lista_general[2].strip('%')) # eliminar el % y convierte el valor a entero
+def aprobados_suspensos(lista_fin):
 
     lista_aprobados = []
     lista_suspensos = []
 
-    if lista_general[2] >= 75 and lista_general[9] >= 4 and lista_general[10] >= 4 and lista_general[11] >= 4 and lista_general[12] >= 5:
-        lista_aprobados.append(lista_general[0:2])
-        # print('Aprobado',lista_general[0:2])
-    else:
-        lista_suspensos.append(lista_general[0:2])
-        # print('Desaprobado',lista_general[0:2])
+    for i in lista_fin:
+        # print(i)
+        v_asistencia_int = int(i.get('Asistencia').strip('%')) # se convierte a valor entero el valor de Asistencia
+        # print(v_asistencia_int)
 
-    return lista_aprobados,lista_suspensos'''
+        if v_asistencia_int >= 75 and i.get('Final1') >= 4 and i.get('Final2') >= 4 and i.get('FinalPracticas ') >= 4 and i.get('NotaFinal') >= 5:
+            # print('Aprobados', i.get('Apellidos') + ',' + i.get('Nombre'))
+            lista_aprobados.append(i.get('Apellidos') + ',' + i.get('Nombre'))
+            # print('Aprobados',lista_aprobados)
+
+        else:
+            # print('Suspenso', i.get('Apellidos') + ',' + i.get('Nombre'))
+            lista_suspensos.append(i.get('Apellidos') + ',' + i.get('Nombre'))
+            # print('suspensos', lista_suspensos)
+
+    return lista_aprobados, lista_suspensos
 
 def lista_dic(registro):
 
@@ -119,21 +125,17 @@ def lista_dic(registro):
 
             lista_values.append(nota_fin(lista_values)) # se agrega la nota final luego de procesar la función nota_fin
 
-            # aprobados_desaprobado(lista_values)
-
-            # print(lista_values)
-
             dic_f1 = dict(zip(lista_key,lista_values)) # se combina lista_key con lista_values para obtener diccionarios
             lista_f1.append(dic_f1) # se obtiene lista con diccionarios
 
     return (lista_f1)
 
-print(lista_dic(registro))
+print(lista_dic(registro)) # print principal
 
-'''lista_aprobados, lista_suspensos = aprobados_desaprobado(lista_dic(registro))
+lista_aprobados, lista_suspensos = aprobados_suspensos(lista_dic(registro)) # se llama al retorno de la función aprobados_suspensos, cada variable es una lista
 
 print('Aprobados', lista_aprobados)
-print('Suspensos', lista_suspensos)'''
+print('Suspensos', lista_suspensos)
 
 
 
