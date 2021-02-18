@@ -14,9 +14,8 @@ Para aprobar el curso, la asistencia tiene que ser mayor o igual que el 75%, la 
 registro = str('calificaciones_limpio.csv')
 lista_f1 = []
 
-
-lista_aprobados = []
-lista_suspensos = []
+# lista_aprobados = []
+# lista_suspensos = []
 
 def tratamiento(lista1):
 
@@ -66,11 +65,12 @@ def nota_fin(lista_nfin):
 
     return lista_nfin
 
-def aprobados_desaprobado(lista_general):
+'''def aprobados_desaprobado(lista_general):
 
     lista_general[2] = int(lista_general[2].strip('%')) # eliminar el % y convierte el valor a entero
-    # lista_aprobados = []
-    # lista_suspensos = []
+
+    lista_aprobados = []
+    lista_suspensos = []
 
     if lista_general[2] >= 75 and lista_general[9] >= 4 and lista_general[10] >= 4 and lista_general[11] >= 4 and lista_general[12] >= 5:
         lista_aprobados.append(lista_general[0:2])
@@ -79,7 +79,7 @@ def aprobados_desaprobado(lista_general):
         lista_suspensos.append(lista_general[0:2])
         # print('Desaprobado',lista_general[0:2])
 
-    return
+    return lista_aprobados,lista_suspensos'''
 
 def lista_dic(registro):
 
@@ -119,7 +119,7 @@ def lista_dic(registro):
 
             lista_values.append(nota_fin(lista_values)) # se agrega la nota final luego de procesar la función nota_fin
 
-            aprobados_desaprobado(lista_values)
+            # aprobados_desaprobado(lista_values)
 
             # print(lista_values)
 
@@ -130,8 +130,10 @@ def lista_dic(registro):
 
 print(lista_dic(registro))
 
+'''lista_aprobados, lista_suspensos = aprobados_desaprobado(lista_dic(registro))
+
 print('Aprobados', lista_aprobados)
-print('Suspensos', lista_suspensos)
+print('Suspensos', lista_suspensos)'''
 
 
 
