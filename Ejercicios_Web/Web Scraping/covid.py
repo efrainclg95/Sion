@@ -36,7 +36,7 @@ print(v_out_resultado)'''
 
 # Solución usando Pandas
 
-df = pd.DataFrame({'Pais':paises,'Total de Casos':total_casos})
+df = pd.DataFrame({'Pais': paises,'Total de Casos': total_casos})
 print(df)
 
 
