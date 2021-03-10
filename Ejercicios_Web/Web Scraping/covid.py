@@ -41,9 +41,6 @@ print(df)
 
 
 
-'''df = pd.DataFrame({'Nombre':equipos,'Puntos':puntos}, index = list(range(1,21)))
-
-print(df)'''
 
 
 
