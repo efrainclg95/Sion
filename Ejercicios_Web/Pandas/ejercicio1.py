@@ -18,6 +18,7 @@ for i in range(v_inicial,v_final + 1):
     s = pd.Series(dic_ventas)
 
 print('Ventas\n',s)
+print('Ventas con descuento del 10%\n', s * 0.9)
 
 
 
