@@ -14,7 +14,6 @@ for i in range(v_inicial,v_final + 1):
     v_ventas_i = int(input('Introduce las ventas del año ' + str(i) + ': '))
 
     dic_ventas[i] = float(v_ventas_i)
-
     s = pd.Series(dic_ventas)
 
 print('Ventas\n',s)
