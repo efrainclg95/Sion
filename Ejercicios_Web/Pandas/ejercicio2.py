@@ -3,7 +3,26 @@ devuelva una serie con la nota mínima, la máxima, media y la desviación típi
 
 import pandas as pd
 
-def serie_notas(diccionario):
-    return diccionario
+# Solución 1
 
-print(serie_notas({'Juan':9, 'María':6.5, 'Pedro':4, 'Carmen': 8.5, 'Luis': 5}))
+'''def serie_notas(diccionario):
+
+    s = pd.Series(diccionario)
+    s = pd.Series([s.max(),s.min(),s.mean(),s.std()], index=['max','min','mean','std'])
+
+    return s
+
+print(serie_notas({'Juan':9, 'María':6.5, 'Pedro':4, 'Carmen': 8.5, 'Luis': 5}))'''
+
+# Soluciòn 2
+
+def serie_notas(diccionario):
+
+    s = pd.Series(diccionario)
+    s = s.describe()
+
+    return s
+
+print(serie_notas({'Juan': 9, 'María': 6.5, 'Pedro': 4, 'Carmen': 8.5, 'Luis': 5}))
+
+
