@@ -6,7 +6,7 @@ import pandas as pd
 def notas_alumnos(diccionario):
 
     s = pd.Series(diccionario)
-    s = s.sort_values()
+    s = s.sort_values(ascending= False)
 
     return s
 
