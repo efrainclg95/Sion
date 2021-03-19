@@ -4,10 +4,12 @@ una lista de meses, y devuelva el balance (ventas - gastos) total en los meses i
 import pandas as pd
 
 def df_datos(diccionario):
+
     df = pd.DataFrame(diccionario)
+    df['Balance'] = pd.Series([1,2,3,4])
 
     return df
 
-print(df_datos({'Mes':['Enero','Febrero','Marzo','Abril'],'Ventas':[30500,35600,28300,33900],'Gastos':[22000,23400,18100,20700]}))
+print (df_datos({'Mes':['Enero','Febrero','Marzo','Abril'],'Ventas':[30500,35600,28300,33900],'Gastos':[22000,23400,18100,20700]}))
 
-# def calculo_balance(dataframe):
+
