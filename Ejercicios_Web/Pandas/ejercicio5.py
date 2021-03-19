@@ -6,7 +6,8 @@ import pandas as pd
 def df_datos(diccionario):
 
     df = pd.DataFrame(diccionario)
-    df['Balance'] = pd.Series([1,2,3,4])
+    bal = df.get('Ventas') - df.get('Gastos')
+    df['Balance'] = pd.Series(bal)
 
     return df
 
