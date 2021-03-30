@@ -10,4 +10,5 @@ import pandas as pd
 
 df = pd.read_csv('cotizacion.csv', sep=';', decimal=',')
 
-print(df.index)
+
+print(df)
