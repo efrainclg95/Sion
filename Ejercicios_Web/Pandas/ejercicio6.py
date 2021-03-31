@@ -8,11 +8,27 @@ devuelva otro DataFrame con el mínimo, el máximo y la media de dada columna.''
 
 import pandas as pd
 
-datos_fichero = pd.read_csv('cotizacion.csv', sep=';', thousands='.', decimal=',', index_col=0)
+# Sol1
+
+'''datos_fichero = pd.read_csv('cotizacion.csv', sep=';', thousands='.', decimal=',', index_col=0)
 
 datos_fichero = pd.DataFrame([datos_fichero.max(),datos_fichero.min(),datos_fichero.mean()], index=['max','min','media'])
 
-print(datos_fichero)
+print(datos_fichero)'''
+
+# Sol2
+
+def construye_df(fichero):
+
+    fichero = pd.DataFrame([fichero.max(), fichero.min(), fichero.mean()],index=['max', 'min', 'media'])
+
+    return fichero
+
+print(construye_df(pd.read_csv('cotizacion.csv', sep=';', thousands='.', decimal=',', index_col=0)))
+
+
+
+
 
 
 
