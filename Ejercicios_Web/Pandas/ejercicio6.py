@@ -8,9 +8,7 @@ devuelva otro DataFrame con el mínimo, el máximo y la media de dada columna.''
 
 import pandas as pd
 
-datos_fichero = pd.read_csv('cotizacion.csv', sep=';', decimal=',')
-
-# datos_fichero = datos_fichero.index([datos_fichero.max(),datos_fichero.min(),datos_fichero.mean(),datos_fichero.std()], index=['max','min','mean','std'])
+datos_fichero = pd.read_csv('cotizacion.csv', sep=';', thousands='.', decimal=',', index_col=0)
 
 datos_fichero = pd.DataFrame([datos_fichero.max(),datos_fichero.min(),datos_fichero.mean()], index=['max','min','media'])
 
