@@ -23,9 +23,16 @@ print(titanic)
 # Mostrar por pantalla las dimensiones del DataFrame, el número de datos que contiene, los nombres de sus columnas y filas, los tipos de datos de las columnas, las 10 primeras filas y las 10 últimas filas
 
 print('Dimensiones: ', titanic.shape)
-print('Nùmero de datos: ', titanic.size)
+print('Nùmero de Datos: ', titanic.size)
 print('Nombres de Columnas: ', titanic.columns)
 print('Nombres de Filas: ', titanic.index)
+print('Tpos de Datos de Columnas: ', titanic.dtypes)
+print('10 Primeras Filas: ', titanic.head(10))
+print('10 Ultimas Columnas: ', titanic.tail(10))
+
+# Mostrar por pantalla los datos del pasajero con identificador 148
+
+
 
 
 
