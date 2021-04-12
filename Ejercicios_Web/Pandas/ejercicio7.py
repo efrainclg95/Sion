@@ -20,6 +20,13 @@ titanic = pd.read_csv('titanic.csv', index_col=0)
 
 print(titanic)
 
+# Mostrar por pantalla las dimensiones del DataFrame, el número de datos que contiene, los nombres de sus columnas y filas, los tipos de datos de las columnas, las 10 primeras filas y las 10 últimas filas
+
+print('Dimensiones: ', titanic.shape)
+print('Nùmero de datos: ', titanic.size)
+print('Nombres de Columnas: ', titanic.columns)
+print('Nombres de Filas: ', titanic.index)
+
 
 
 
