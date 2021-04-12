@@ -32,7 +32,7 @@ print('10 Ultimas Columnas: ', titanic.tail(10))
 
 # Mostrar por pantalla los datos del pasajero con identificador 148
 
-
+print('Pasajero Id 148: ', titanic.loc[148])
 
 
 
