@@ -39,7 +39,10 @@ print('Pasajero Id 148: ', titanic.loc[148])'''
 
 v_cfilas = titanic.shape[0] # cantidad de filas (891)
 
+for num in range(v_cfilas):
+    if num % 2 == 0 and num != 0:
 
+        print(num)
 
 
 
