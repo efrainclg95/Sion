@@ -39,10 +39,21 @@ print('Pasajero Id 148: ', titanic.loc[148])'''
 
 v_cfilas = titanic.shape[0] # cantidad de filas (891)
 
-for num in range(v_cfilas):
-    if num % 2 == 0 and num != 0:
+# print(titanic.loc[:5,('PassengerId','Name')])
+# print(titanic.iloc[5,:12])
 
-        print(num)
+
+for num in range(10):
+    if num % 2 == 0:
+        # print(titanic.reindex(index=[num], columns=['PassengerId','Name']))
+        print(titanic.iloc[num, :12])
+
+
+
+
+
+
+
 
 
 
