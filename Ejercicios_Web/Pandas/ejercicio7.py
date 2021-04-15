@@ -37,16 +37,14 @@ print('Pasajero Id 148: ', titanic.loc[148])'''
 
 # Mostrar por pantalla las filas pares del DataFrame
 
-v_cfilas = titanic.shape[0] # cantidad de filas (891)
+lista_indices = []
 
-# print(titanic.loc[:5,('PassengerId','Name')])
-# print(titanic.iloc[5,:12])
-
-
-for num in range(10):
+for num in (titanic.index.values):
     if num % 2 == 0:
-        # print(titanic.reindex(index=[num], columns=['PassengerId','Name']))
-        print(titanic.iloc[num,:12])
+        lista_indices.append(num)
+
+print(titanic.iloc[lista_indices,:])
+
 
 
 
