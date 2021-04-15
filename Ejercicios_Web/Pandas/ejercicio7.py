@@ -46,7 +46,7 @@ v_cfilas = titanic.shape[0] # cantidad de filas (891)
 for num in range(10):
     if num % 2 == 0:
         # print(titanic.reindex(index=[num], columns=['PassengerId','Name']))
-        print(titanic.iloc[num, :12])
+        print(titanic.iloc[num,:12])
 
 
 
