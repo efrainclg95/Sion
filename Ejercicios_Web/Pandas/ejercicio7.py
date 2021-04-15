@@ -16,9 +16,10 @@ Mostrar por pantalla el porcentaje de menores y mayores de edad que sobreviviero
 import pandas as pd
 
 # Generar un DataFrame con los datos del fichero.
-titanic = pd.read_csv('titanic.csv', index_col=0)
+# titanic = pd.read_csv('titanic.csv', index_col=0)
+titanic = pd.read_csv('titanic.csv')
 
-print(titanic)
+'''print(titanic)
 
 # Mostrar por pantalla las dimensiones del DataFrame, el número de datos que contiene, los nombres de sus columnas y filas, los tipos de datos de las columnas, las 10 primeras filas y las 10 últimas filas
 
@@ -32,7 +33,17 @@ print('10 Ultimas Columnas: ', titanic.tail(10))
 
 # Mostrar por pantalla los datos del pasajero con identificador 148
 
-print('Pasajero Id 148: ', titanic.loc[148])
+print('Pasajero Id 148: ', titanic.loc[148])'''
+
+# Mostrar por pantalla las filas pares del DataFrame
+
+v_cfilas = titanic.shape[0] # cantidad de filas (891)
+
+
+
+
+
+
 
 
 
