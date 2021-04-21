@@ -19,21 +19,21 @@ import pandas as pd
 # titanic = pd.read_csv('titanic.csv', index_col=0)
 titanic = pd.read_csv('titanic.csv')
 
-'''print(titanic)
+print(titanic)
 
 # Mostrar por pantalla las dimensiones del DataFrame, el número de datos que contiene, los nombres de sus columnas y filas, los tipos de datos de las columnas, las 10 primeras filas y las 10 últimas filas
 
-print('Dimensiones: ', titanic.shape)
-print('Nùmero de Datos: ', titanic.size)
-print('Nombres de Columnas: ', titanic.columns)
-print('Nombres de Filas: ', titanic.index)
-print('Tpos de Datos de Columnas: ', titanic.dtypes)
-print('10 Primeras Filas: ', titanic.head(10))
-print('10 Ultimas Columnas: ', titanic.tail(10))
+print('Dimensiones:\n', titanic.shape)
+print('Nùmero de Datos:\n', titanic.size)
+print('Nombres de Columnas:\n',titanic.columns)
+print('Nombres de Filas:\n',titanic.index)
+print('Tpos de Datos de Columnas:\n', titanic.dtypes)
+print('10 Primeras Filas:\n', titanic.head(10))
+print('10 Ultimas Columnas:\n ', titanic.tail(10))
 
 # Mostrar por pantalla los datos del pasajero con identificador 148
 
-print('Pasajero Id 148: ', titanic.loc[148])'''
+print('Pasajero Id 148:\n', titanic.loc[148])
 
 # Mostrar por pantalla las filas pares del DataFrame
 
@@ -43,7 +43,7 @@ for num in (titanic.index.values):
     if num % 2 == 0:
         lista_indices.append(num)
 
-print(titanic.iloc[lista_indices,:])
+print('Filas pares del DataFrame:\n', titanic.iloc[lista_indices,:])
 
 
 
