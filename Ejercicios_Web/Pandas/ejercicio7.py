@@ -43,11 +43,13 @@ for num in (titanic.index.values):
     if num % 2 == 0:
         lista_indices.append(num)
 
-print('Filas pares del DataFrame:\n', titanic.iloc[lista_indices,:])'''
+print('Filas pares del DataFrame:\n', titanic.iloc[lista_indices,:])
 
 # Mostrar por pantalla los nombres de las personas que iban en primera clase ordenadas alfabéticamente.
 
-print(titanic[(titanic['Pclass']==1)].reindex(columns=['Pclass','Name']).sort_values('Name'))
+print('Personas que fueron en primera clase:\n',titanic[(titanic['Pclass']==1)].reindex(columns=['Pclass','Name']).sort_values('Name'))'''
+
+# Mostrar por pantalla el porcentaje de personas que sobrevivieron y murieron
 
 
 
