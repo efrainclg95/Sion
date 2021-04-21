@@ -19,7 +19,7 @@ import pandas as pd
 # titanic = pd.read_csv('titanic.csv', index_col=0)
 titanic = pd.read_csv('titanic.csv')
 
-print(titanic)
+'''print(titanic)
 
 # Mostrar por pantalla las dimensiones del DataFrame, el número de datos que contiene, los nombres de sus columnas y filas, los tipos de datos de las columnas, las 10 primeras filas y las 10 últimas filas
 
@@ -43,7 +43,11 @@ for num in (titanic.index.values):
     if num % 2 == 0:
         lista_indices.append(num)
 
-print('Filas pares del DataFrame:\n', titanic.iloc[lista_indices,:])
+print('Filas pares del DataFrame:\n', titanic.iloc[lista_indices,:])'''
+
+# Mostrar por pantalla los nombres de las personas que iban en primera clase ordenadas alfabéticamente.
+
+print(titanic.reindex(columns=['Pclass','Name']))
 
 
 
