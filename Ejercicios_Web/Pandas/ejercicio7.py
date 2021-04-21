@@ -47,7 +47,9 @@ print('Filas pares del DataFrame:\n', titanic.iloc[lista_indices,:])'''
 
 # Mostrar por pantalla los nombres de las personas que iban en primera clase ordenadas alfabéticamente.
 
-print(titanic.reindex(columns=['Pclass','Name']))
+print(titanic[(titanic['Pclass']==1)].reindex(columns=['Pclass','Name']).sort_values('Name'))
+
+
 
 
 
