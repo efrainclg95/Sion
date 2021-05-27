@@ -27,5 +27,6 @@ elif v_num1 == v_num2:
         print('La div no es entera, su cociente es: {} y su residuo es: {}'.format(cociente,residuo))
 
 else:
+
     print('El primer número no es mayor que el segundo')
     print('La div no es entera, su cociente es: {} y su residuo es: {}'.format(cociente, residuo))
