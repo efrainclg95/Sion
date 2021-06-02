@@ -3,7 +3,7 @@
 # 1.
 # PISTA: Convierte la letra introducida a minúsculas para tener que realizar menos comprobaciones
 
-v_letra = str(input('Introduzca una letra: '))
+v_letra = str(input('Introduzca una letra: ').lower())
 
 v_vocales = 'a', 'e', 'i', 'o', 'u'
 
