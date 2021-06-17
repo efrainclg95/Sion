@@ -13,6 +13,7 @@ while v_num_in != 0:
         print('Es impar')
         v_num_in = int(input('Ingrese número entero: '))
 
+
 print('Ingresaste el valor prohibido, chau!!!')
 
 

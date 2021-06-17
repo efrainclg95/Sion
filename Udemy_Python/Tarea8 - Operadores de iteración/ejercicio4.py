@@ -1,6 +1,7 @@
 # Haz que el usuario introduzca números enteros por teclado. Mientras el usuario no introduzca el 0, calcula
 # cuántos números positivos y cuántos negativos ha introducido y muéstraselo al final.
 
+
 v_num = int(input('Ingrese número: '))
 contador_p = 0
 contador_n = 0
