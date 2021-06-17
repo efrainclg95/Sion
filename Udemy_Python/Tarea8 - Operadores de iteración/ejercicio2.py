@@ -1,7 +1,6 @@
 # Haz que el usuario introduzca una palabra y una letra por teclado. Comprueba si la palabra contiene la
 # letra o no e indícaselo al usuario por pantalla.
 
-
 v_palabra = str(input('Ingrese una palabra: ').lower())
 v_letra = str(input('Ingrese una letra: ').lower())
 

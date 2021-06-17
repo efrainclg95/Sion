@@ -2,7 +2,6 @@
 # pasa de 200€, entonces ya no debe poder introducir más precios pues se ha pasado de presupuesto. Sea cual
 # sea el resultado (o bien el precio final o bien que no tiene más presupuesto), indícaselo por pantalla al usuario.
 
-
 v_precio = float(input('Ingrese precio: '))
 
 while v_precio != 0:
